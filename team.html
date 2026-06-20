@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <title>Team | VIN-SSUM</title>
+  <link rel="icon" type="image/png" href="assets/images/logo_no description.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/scroll-experience.css">
+  <style>
+    body { margin: 0; font-family: var(--font-body); background: var(--color-surface); color: var(--color-text); }
+    main { background: #ffffff; }
+    .team-hero { padding: 74px 0 54px; background: linear-gradient(180deg, #f6f9fd 0%, #ffffff 100%); }
+    .team-inner { width: min(1080px, 90%); margin: 0 auto; }
+    .team-kicker { display: inline-flex; margin: 0 0 18px; color: var(--color-primary); font-size: 14px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .team-hero h1 { max-width: 820px; margin: 0; color: var(--color-primary-dark); font-size: clamp(42px, 8vw, 82px); line-height: .98; letter-spacing: 0; }
+    .team-hero p { max-width: 760px; margin: 24px 0 0; color: #4d5b6c; font-size: clamp(18px, 2vw, 23px); line-height: 1.6; }
+    .team-section { padding: 42px 0; border-top: 1px solid var(--color-border); }
+    .team-section:first-of-type { border-top: 0; }
+    .section-head { display: flex; gap: 20px; align-items: flex-end; justify-content: space-between; margin-bottom: 24px; }
+    .section-head.member-subhead { margin-top: 38px; }
+    .section-head h2 { margin: 0; color: #111827; font-size: clamp(26px, 4vw, 42px); line-height: 1.08; }
+    .section-head p { max-width: 520px; margin: 0; color: #5d6673; font-size: 17px; line-height: 1.58; }
+    .person-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
+    .member-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 820px; }
+    .person-card { display: flex; min-height: 100%; flex-direction: column; border: 1px solid var(--color-border); border-radius: 8px; background: #ffffff; overflow: hidden; box-shadow: 0 12px 32px rgba(11, 36, 72, .06); }
+    .person-card.is-featured { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(300px, 44%) minmax(0, 1fr); max-width: 900px; }
+    .person-card.is-featured .person-photo { height: 100%; aspect-ratio: auto; }
+    .person-card.is-featured .person-body { display: flex; flex-direction: column; justify-content: center; padding: 34px; }
+    .person-photo { display: block; width: 100%; aspect-ratio: 4 / 3; background: #eef3f8; object-fit: cover; object-position: center; }
+    .person-photo.focus-top { object-position: center 18%; }
+    .person-photo.member-photo { width: calc(100% - 32px); margin: 16px 16px 0; border-radius: 8px; aspect-ratio: 4 / 3; background: #ffffff; object-fit: cover; object-position: center top; }
+    .member-list .person-card { border-radius: 8px; box-shadow: none; }
+    .member-list .person-body h3 { margin-bottom: 12px; font-size: 24px; }
+    .member-list .person-role { margin-bottom: 20px; color: #1700a8; font-size: 17px; font-weight: 800; }
+    .member-org { color: #526070; font-size: 18px; line-height: 1.5; }
+    .person-body { padding: 22px; }
+    .person-body h3 { margin: 0 0 8px; color: #101828; font-size: 22px; line-height: 1.2; }
+    .person-role { margin: 0 0 14px; color: var(--color-primary); font-size: 15px; font-weight: 800; line-height: 1.4; }
+    .person-body p { margin: 0 0 16px; color: #526070; font-size: 16px; line-height: 1.58; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .tag-row span { display: inline-flex; align-items: center; min-height: 30px; padding: 0 10px; border: 1px solid #d8e2ef; border-radius: 999px; color: #314256; font-size: 13px; font-weight: 700; }
+    .profile-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .profile-actions a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 14px; border: 1px solid var(--color-primary); border-radius: 999px; background: var(--color-primary); color: #ffffff !important; font-size: 14px; font-weight: 800; text-decoration: none; }
+    .profile-actions a.secondary { background: #ffffff; color: var(--color-primary) !important; }
+    .profile-actions a:hover, .profile-actions a:focus-visible { border-color: var(--color-danger); background: var(--color-danger); color: #ffffff !important; }
+    .member-tabs { display: flex; flex-wrap: wrap; gap: 14px; margin: -2px 0 28px; }
+    .member-tab { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border: 1px solid #d9dfe8; border-radius: 999px; background: #ffffff; color: #2d3748; font: inherit; font-size: 18px; font-weight: 800; cursor: pointer; }
+    .member-tab[aria-selected="true"] { border-color: #b7a8ff; background: #f5f2ff; color: #1700a8; }
+    .member-tab:hover, .member-tab:focus-visible { border-color: #b7a8ff; color: #1700a8; }
+    .member-panel[hidden] { display: none; }
+    .empty-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .empty-state { min-height: 154px; padding: 24px; border: 1px dashed #c7d3e3; border-radius: 8px; background: #f8fafc; }
+    .empty-state strong { display: block; margin-bottom: 10px; color: #182132; font-size: 18px; line-height: 1.35; }
+    .empty-state p { margin: 0; color: #637083; font-size: 16px; line-height: 1.55; }
+    .lab-photo-band { margin-top: 20px; border-radius: 8px; overflow: hidden; border: 1px solid var(--color-border); }
+    .lab-photo-band img { display: block; width: 100%; aspect-ratio: 16 / 6; object-fit: cover; object-position: center; }
+    @media (max-width: 900px) {
+      .section-head { display: block; }
+      .section-head p { margin-top: 12px; }
+      .person-grid, .empty-grid, .member-grid { grid-template-columns: 1fr; max-width: none; }
+      .member-list { grid-template-columns: 1fr; max-width: none; }
+      .person-card.is-featured { display: flex; max-width: none; }
+      .person-card.is-featured .person-photo { height: auto; aspect-ratio: 4 / 3; }
+      .person-card.is-featured .person-body { display: block; padding: 22px; }
+      .lab-photo-band img { aspect-ratio: 16 / 9; }
+    }
+    @media (max-width: 520px) {
+      .team-hero { padding: 50px 0 38px; }
+      .team-section { padding: 34px 0; }
+      .person-body, .empty-state { padding: 20px; }
+      .member-tab { min-height: 44px; padding: 0 16px; font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" id="wrapper">
+    <div class="header">
+      <a class="blog-logo" href="index.html" title="VIN-SSUM" rel="home">
+        <img src="assets/images/logo_no description.png" alt="VIN-SSUM">
+        <span class="logo-wordmark"><span>VIN</span>-SSUM</span>
+        <span class="logo-subtitle">Vin Sustainable and Smart Urban Mobility Lab</span>
+      </a>
+      <div class="clear"></div>
+    </div>
+    <div class="navigation bg-dark">
+      <div class="section-inner">
+        <ul class="main-menu">
+          <li class="menu-item"><a href="index.html">About</a></li>
+          <li class="menu-item"><a href="research.html">Research</a></li>
+          <li class="menu-item current-menu-item"><a href="team.html" aria-current="page">Team</a></li>
+          <li class="menu-item"><a href="publication.html">Publication</a></li>
+          <li class="menu-item"><a href="projects.html">Projects</a></li>
+          <li class="menu-item"><a href="news.html">News</a></li>
+          <li class="menu-item"><a href="photo.html">Photo</a></li>
+          <li class="menu-item"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <section class="team-hero" aria-labelledby="team-title">
+        <div class="team-inner">
+          <span class="team-kicker">Team</span>
+          <h1 id="team-title">The people behind VIN-SSUM.</h1>
+          <p>A concise directory of the lab director, students, research assistants, alumni, and collaborators shaping sustainable and smart urban mobility research.</p>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="director-title">
+        <div class="team-inner">
+          <div class="section-head">
+            <h2 id="director-title">Lab Director</h2>
+          </div>
+          <div class="person-grid">
+            <article class="person-card is-featured">
+              <img class="person-photo" src="assets/images/member/Quy-Duy.webp" alt="Nguyen Phuoc Quy Duy">
+              <div class="person-body">
+                <h3>Nguyen Phuoc Quy Duy</h3>
+                <p class="person-role">Associate Professor, VinUniversity</p>
+                <p>Director of the Vin Sustainable and Smart Urban Mobility Lab. His work focuses on sustainable mobility, travel behaviour, traffic safety, transport modelling, and transport economics.</p>
+                <div class="tag-row" aria-label="Research interests">
+                  <span>Sustainable mobility</span><span>Traffic safety</span><span>Transport behaviour</span>
+                </div>
+                <div class="profile-actions">
+                  <a href="https://www.linkedin.com/in/nguyen-phuoc-q-duy-71078a90/" target="_blank" rel="noopener">LinkedIn</a>
+                  <a class="secondary" href="https://npqduy.com/" target="_blank" rel="noopener">Personal website</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="students-title">
+        <div class="team-inner">
+          <div class="section-head">
+            <h2 id="students-title">Graduate Students</h2>
+          </div>
+          <div class="member-tabs" role="tablist" aria-label="Graduate student groups">
+            <button class="member-tab" type="button" role="tab" id="phd-tab" aria-controls="phd-panel" aria-selected="true" data-member-tab="phd-panel">PhD Students</button>
+            <button class="member-tab" type="button" role="tab" id="master-tab" aria-controls="master-panel" aria-selected="false" data-member-tab="master-panel">Master Students</button>
+          </div>
+          <div id="phd-panel" class="member-panel" role="tabpanel" aria-labelledby="phd-tab"></div>
+          <div id="master-panel" class="member-panel" role="tabpanel" aria-labelledby="master-tab" hidden></div>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="assistants-title">
+        <div class="team-inner">
+          <div class="section-head">
+            <h2 id="assistants-title">Research Assistants</h2>
+          </div>
+          <div class="member-tabs" role="tablist" aria-label="Research assistant groups">
+            <button class="member-tab" type="button" role="tab" id="ra-tab" aria-controls="ra-panel" aria-selected="true" data-member-tab="ra-panel">Research Assistants</button>
+            <button class="member-tab" type="button" role="tab" id="undergrad-ra-tab" aria-controls="undergrad-ra-panel" aria-selected="false" data-member-tab="undergrad-ra-panel">Undergraduate Student RAs</button>
+          </div>
+          <div id="ra-panel" class="member-panel" role="tabpanel" aria-labelledby="ra-tab">
+          <div class="member-list">
+            <article class="person-card">
+              <img class="person-photo member-photo" src="assets/images/member/card/quang-nhat-card.jpg" alt="Vo Dinh Quang Nhat">
+              <div class="person-body">
+                <h3>Vo Dinh Quang Nhat, MSc</h3>
+                <p class="person-role">Research Assistant</p>
+                <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+                <div class="profile-actions">
+                  <a href="https://www.linkedin.com/in/dinh-quang-nhat-vo-28563b1a6/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+            <article class="person-card">
+              <img class="person-photo member-photo" src="assets/images/member/card/minh-ngan-card.jpg" alt="Ho Thi Minh Ngan">
+              <div class="person-body">
+                <h3>Ho Thi Minh Ngan</h3>
+                <p class="person-role">Research Assistant</p>
+                <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+              </div>
+            </article>
+          </div>
+          </div>
+          <div id="undergrad-ra-panel" class="member-panel" role="tabpanel" aria-labelledby="undergrad-ra-tab" hidden>
+          <div class="member-list">
+            <article class="person-card">
+              <img class="person-photo member-photo" src="assets/images/member/card/dang-tuan-kiet-card.jpg" alt="Dang Tuan Kiet">
+              <div class="person-body">
+                <h3>Dang Tuan Kiet</h3>
+                <p class="person-role">Research Assistant</p>
+                <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+                <div class="profile-actions">
+                  <a href="https://www.linkedin.com/in/cuki2910/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+            <article class="person-card">
+              <img class="person-photo member-photo" src="assets/images/member/card/le-nhat-minh-card.jpg" alt="Le Nhat Minh">
+              <div class="person-body">
+                <h3>Le Nhat Minh</h3>
+                <p class="person-role">Research Assistant</p>
+                <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+                <div class="profile-actions">
+                  <a href="https://www.linkedin.com/in/nh%E1%BA%ADt-minh-l%C3%AA-03b21b373/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section" aria-labelledby="network-title">
+        <div class="team-inner">
+          <div class="section-head">
+            <h2 id="network-title">Alumni &amp; Collaborators</h2>
+          </div>
+          <div class="empty-grid">
+            <div class="empty-state">
+              <strong>No alumni profiles listed yet</strong>
+              <p>This section will track former lab members and their next affiliations.</p>
+            </div>
+            <div class="empty-state">
+              <strong>No collaborator profiles listed yet</strong>
+              <p>This section will highlight institutional and research collaborators.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <section class="site-footer-brand" aria-label="Lab summary">
+          <h2>Vin Sustainable and Smart Urban Mobility Lab</h2>
+          <p>Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+          <p>Advancing sustainable, smart, and human-centered urban mobility through transport behaviour, traffic safety, modelling, economics, and policy research.</p>
+        </section>
+        <section class="site-footer-contact" aria-label="Contact">
+          <h2>Contact</h2>
+          <p><a href="mailto:vinuni.ssum@gmail.com">vinuni.ssum@gmail.com</a></p>
+          <p>VinUniversity, Vinhomes Ocean Park</p>
+          <p>Gia Lam District, Hanoi, Vietnam</p>
+        </section>
+        <section class="site-footer-connect" aria-label="Copyright"><p class="site-footer-copyright">&copy; 2026 VIN-SSUM Lab.</p></section>
+      </div>
+    </footer>
+  </div>
+  <script src="js/scroll-experience.js"></script>
+  <script>
+    document.querySelectorAll('[data-member-tab]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const tablist = button.closest('[role="tablist"]');
+        if (!tablist) return;
+        tablist.querySelectorAll('[data-member-tab]').forEach((tab) => {
+          const selected = tab === button;
+          tab.setAttribute('aria-selected', String(selected));
+          const panel = document.getElementById(tab.getAttribute('data-member-tab'));
+          if (panel) panel.hidden = !selected;
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

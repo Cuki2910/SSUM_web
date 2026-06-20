@@ -1,0 +1,13 @@
+:root {
+  --color-primary: #003c7f;
+  --color-primary-dark: #0b2448;
+  --color-accent: #f2a900;
+  --color-danger: #d71920;
+  --color-text: #111111;
+  --color-muted: #5d6673;
+  --color-background: #ffffff;
+  --color-surface: #f5f7fb;
+  --color-border: #dde4ef;
+  --shadow-soft: 0 18px 45px rgba(11, 36, 72, 0.08);
+  --font-body: "Open Sans", Arial, sans-serif;
+}

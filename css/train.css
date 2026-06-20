@@ -1,0 +1,21 @@
+#train-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 1300px) {
+  #train-canvas {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #train-canvas {
+    display: none;
+  }
+}
