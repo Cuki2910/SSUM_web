@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add('page-loading');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <title>Publication | VIN-SSUM</title>
   <link rel="icon" type="image/png" href="assets/images/logo_no description.png">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/scroll-experience.css">
+  <link rel="stylesheet" href="css/lab-content.css">
   <style>
     body { margin: 0; font-family: var(--font-body); background: var(--color-surface); color: var(--color-text); }
     .simple-hero { min-height: 300px; background: linear-gradient(rgba(11,36,72,.35), rgba(11,36,72,.2)), url('assets/images/vinuni_banner.webp') center/cover no-repeat; }
@@ -18,38 +20,45 @@
   </style>
 </head>
 <body>
+  <div class="page-loader" role="status" aria-live="polite"><span class="page-loader__scene" aria-hidden="true"><span class="page-loader__track"></span><span class="page-loader__landscape" aria-hidden="true"><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span></span><span class="page-loader__train"><span class="page-loader__engine"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span></span></span><p class="page-loader__text">Loading</p></div>
   <div class="wrapper" id="wrapper">
-    <div class="header">
-      <a class="blog-logo" href="index.html" title="VIN-SSUM" rel="home">
-        <img src="assets/images/logo_no description.png" alt="VIN-SSUM">
-        <span class="logo-wordmark"><span>VIN</span>-SSUM</span>
-        <span class="logo-subtitle">Vin Sustainable and Smart Urban Mobility Lab</span>
-      </a>
-      <div class="clear"></div>
+    <div class="site-masthead">
+      <header class="header">
+        <a class="blog-logo" href="index.html" title="VIN-SSUM" rel="home">
+          <img src="assets/images/logo_no description.png" alt="VIN-SSUM">
+          <span class="logo-wordmark"><span>VIN</span>-SSUM</span>
+          <span class="logo-subtitle">Vin Sustainable and Smart Urban Mobility Lab</span>
+        </a>
+      </header>
+      <nav class="navigation bg-dark" aria-label="Primary navigation">
+        <div class="section-inner">
+          <ul class="main-menu">
+            <li class="menu-item"><a href="index.html">About</a></li>
+            <li class="menu-item"><a href="research.html">Research</a></li>
+            <li class="menu-item"><a href="team.html">Team</a></li>
+            <li class="menu-item current-menu-item"><a href="publication.html" aria-current="page">Publication</a></li>
+            <li class="menu-item"><a href="projects.html">Projects</a></li>
+            <li class="menu-item"><a href="news.html">News</a></li>
+            <li class="menu-item"><a href="photo.html">Photo</a></li>
+            <li class="menu-item"><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <div class="navigation bg-dark">
-      <div class="section-inner">
-        <ul class="main-menu">
-          <li class="menu-item"><a href="index.html">About</a></li>
-          <li class="menu-item"><a href="research.html">Research</a></li>
-          <li class="menu-item"><a href="team.html">Team</a></li>
-          <li class="menu-item current-menu-item"><a href="publication.html" aria-current="page">Publication</a></li>
-          <li class="menu-item"><a href="projects.html">Projects</a></li>
-          <li class="menu-item"><a href="news.html">News</a></li>
-          <li class="menu-item"><a href="photo.html">Photo</a></li>
-          <li class="menu-item"><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="simple-hero" aria-hidden="true"></div>
-    <main>
-      <div class="simple-inner">
-        <section class="placeholder-card">
-          <h1>Publication</h1>
-          <p>This local page is ready for VIN-SSUM content.</p>
-        </section>
-      </div>
-    </main>
+    <section class="page-hero"><div class="page-hero__inner"><span class="page-hero__kicker">Publications</span><h1>Recent work in print.</h1><p class="page-hero__lead">Selected recent journal articles from the lab, ordered by year.</p></div></section>
+    <main><div class="simple-inner"><section class="lab-page"><div class="publication-list">
+<article class="publication-item"><h2>Optimal timetabling and charger deployment for urban-rural electric bus services: Formulation and case study</h2><p class="publication-authors">Z. Wang, J. Z. C. Li, D. Q. Nguyen-Phuoc, X. Fu</p><p class="publication-venue">Transportation Research Part A: Policy and Practice, 208, 104981 (2026)</p></article>
+<article class="publication-item"><h2>Modified MRBQ for the gig economy: linking risky riding behaviors to self-reported safety incidents among food delivery riders</h2><p class="publication-authors">A. Perez, D. Q. Nguyen-Phuoc, N. D. Q. Vo, J. J. Lee</p><p class="publication-venue">Accident Analysis &amp; Prevention, 231, 108525 (2026)</p></article>
+<article class="publication-item"><h2>Motorcycle safety in Vietnam: Revising and expanding the MRBQ to reflect emerging urban risks</h2><p class="publication-authors">A. Perez, D. Q. Nguyen-Phuoc</p><p class="publication-venue">Transportation Research Part F: Traffic Psychology and Behaviour, 120, 103622 (2026)</p></article>
+<article class="publication-item"><h2>Parents protect their children when travelling: Exploring traffic safety behavioral intentions through the lens of cognitive appraisals and preventive motivations</h2><p class="publication-authors">N. D. Q. Vo, D. Q. Nguyen-Phuoc, A. Perez, J. J. Lee</p><p class="publication-venue">Accident Analysis &amp; Prevention, 228, 108531 (2026)</p></article>
+<article class="publication-item"><h2>Driving the shift to electric motorcycles: the role of AI trust and AI benefits</h2><p class="publication-authors">D. Q. Nguyen-Phuoc, T. N. Ho-Mai, T. P. T. Nguyen, N. D. Q. Vo, T. T. Luu, D. N. Su</p><p class="publication-venue">Transportation Research Part F: Traffic Psychology and Behaviour, 118, 103484 (2026)</p></article>
+<article class="publication-item"><h2>How do the awareness of AI benefits and government subsidies affect green transport adoption: the moderating role of technology interest and engagement</h2><p class="publication-authors">D. Q. Nguyen-Phuoc, T. N. Ho-Mai, T. T. Luu, D. N. Su</p><p class="publication-venue">Transportation Research Part A: Policy and Practice, 204, 104846 (2026)</p></article>
+<article class="publication-item"><h2>A cross-cultural perspective on risky young drivers' behavior: evidence from 12 countries</h2><p class="publication-authors">S. A. Useche, B. Scott-Parker, F. Alonso, B. Cendales, S. Traficante, J. Tosi, et al.</p><p class="publication-venue">Transportation Research Part F: Traffic Psychology and Behaviour, 116, 103430 (2026)</p></article>
+<article class="publication-item"><h2>Why car-driving and motorcycle-riding parents differ in safety compliance when travelling with children</h2><p class="publication-authors">N. D. Q. Vo, D. Q. Nguyen-Phuoc, T. Nguyen</p><p class="publication-venue">Transportation Research Part F: Traffic Psychology and Behaviour, 116, 103414 (2026)</p></article>
+<article class="publication-item"><h2>How value, cost, and emotions drive electric motorcycle adoption in Vietnam: A cognitive-affective-conative approach</h2><p class="publication-authors">B. Van Nguyen, D. Q. Nguyen-Phuoc, N. D. Q. Vo, D. N. Su, et al.</p><p class="publication-venue">Research in Transportation Business &amp; Management, 64, 101534 (2026)</p></article>
+<article class="publication-item"><h2>Electric Two-Wheeler Crashes: Risk Factors and Potential Solutions - A Systematic Review</h2><p class="publication-authors">A. Pervaz, D. Q. Nguyen-Phuoc, J. J. Lee, F. Chang, H. Munir, S. Ahmad</p><p class="publication-venue">KSCE Journal of Civil Engineering, 100468 (2025)</p></article>
+<article class="publication-item"><h2>Exploring Determinants of Risk-Riding Behaviour among Food Delivery Riders: A Systematic Literature Review</h2><p class="publication-authors">S. Subramaniam, M. N. Borhan, D. Q. Nguyen-Phuoc, A. N. H. Ibrahim</p><p class="publication-venue">IEEE Access (2025)</p></article>
+</div></section></div></main>
     <footer class="site-footer">
       <div class="site-footer-inner">
         <section class="site-footer-brand" aria-label="Lab summary">
@@ -60,6 +69,7 @@
         <section class="site-footer-contact" aria-label="Contact">
           <h2>Contact</h2>
           <p><a href="mailto:vinuni.ssum@gmail.com">vinuni.ssum@gmail.com</a></p>
+          <p><a href="tel:+84325752130">+84 325 752 130</a></p>
           <p>VinUniversity, Vinhomes Ocean Park</p>
           <p>Gia Lam District, Hanoi, Vietnam</p>
         </section>
@@ -69,10 +79,8 @@
   </div>
   <script src="js/scroll-experience.js"></script>
 
+  <script src="js/navigation.js"></script>
+  <script src="js/back-to-top.js"></script>
+  <script src="js/page-transition.js"></script>
 </body>
 </html>
-
-
-
-
-

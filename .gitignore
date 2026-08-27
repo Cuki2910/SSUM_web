@@ -1,3 +1,15 @@
 .vercel
 node_modules/
 .server.pid
+
+# Local agent worktrees and disposable review artifacts
+.agents/
+.claude/
+plan/
+checkcss.js
+shot.js
+shot-*.png
+research-flipped*.png
+skills-lock.json
+tests/font-color-test.html
+tests/screenshots/

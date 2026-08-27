@@ -10,9 +10,7 @@
 
   /* ── Header shrink ────────────────────────────────────────────────────── */
   var header = document.querySelector('.header');
-
-  /* ── Hero parallax ────────────────────────────────────────────────────── */
-  var heroImg = document.querySelector('.flexslider .slides li img');
+  var masthead = document.querySelector('.site-masthead');
 
   /* ── rAF-throttled scroll handler ────────────────────────────────────── */
   var ticking = false;
@@ -24,9 +22,7 @@
     var dh = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.width = (dh > 0 ? (sy / dh) * 100 : 0) + '%';
     if (header) { header.classList.toggle('scrolled', sy > 60); }
-    if (heroImg && !reduced && window.innerWidth >= 768) {
-      heroImg.style.transform = 'translateY(' + (sy * 0.25) + 'px)';
-    }
+    if (masthead) { masthead.classList.toggle('scrolled', sy > 60); }
     ticking = false;
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -48,6 +44,9 @@
     /* simple pages */
     '.placeholder-card',
     '.simple-inner',
+    '.publication-item',
+    '.page-hero__kicker',
+    '.page-hero__lead',
     /* footer */
     '.site-footer-brand',
     '.site-footer-contact',
@@ -74,6 +73,7 @@
     '.section-title',
     '.cd-section h2',
     '.team-hero h1',
+    '.page-hero h1',
     '.section-head h2',
   ];
 
