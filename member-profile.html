@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('page-loading');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14352a">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Member profile | VIN-SSUM</title>
+  <link rel="icon" type="image/png" href="assets/images/logo_no description.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/scroll-experience.css">
+  <style>
+    main { padding: 0 0 var(--space-section); background: #fff; }
+    .member-profile { width: min(1120px, 90%); margin: 0 auto; }
+    .member-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 28px 0; color: var(--color-muted); font-size: 15px; font-weight: 700; }
+    .member-breadcrumb a { color: var(--color-muted); text-decoration: none; }
+    .member-breadcrumb a:hover, .member-breadcrumb a:focus-visible { color: var(--color-primary); }
+    .member-breadcrumb [aria-hidden="true"] { color: var(--color-border); }
+    .member-breadcrumb [aria-current="page"] { color: var(--color-primary-dark); }
+    .member-profile-card { position: relative; display: grid; grid-template-columns: minmax(260px, 34%) minmax(0, 1fr); overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: linear-gradient(135deg, #fff 0%, #fff 62%, #eaf5ee 100%); box-shadow: var(--shadow-soft); }
+    .member-profile-card::after { position: absolute; top: -18%; right: -6%; width: min(38vw, 440px); aspect-ratio: 1; border: 46px solid rgba(156, 207, 178, .2); border-radius: 50%; content: ''; pointer-events: none; }
+    .member-profile-photo { position: relative; z-index: 1; display: block; width: 100%; height: 100%; min-height: 380px; object-fit: cover; object-position: center; background: #eef3f8; }
+    .member-profile-content { position: relative; z-index: 1; display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: clamp(30px, 5vw, 64px); }
+    .member-profile-eyebrow { margin: 0 0 12px; color: var(--color-primary); font-family: var(--font-heading); font-size: 14px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .member-profile-content h1 { margin: 0; color: var(--color-primary-dark); font-size: clamp(32px, 5vw, 54px); line-height: 1.08; }
+    .member-profile-role { margin: 20px 0 0; color: var(--color-primary); font-size: 20px; font-weight: 900; line-height: 1.42; }
+    .member-profile-org { margin: 10px 0 0; color: var(--color-text); font-size: 18px; line-height: 1.56; }
+    .member-profile-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; }
+    .member-profile-actions a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 18px; border: 1px solid var(--color-primary); border-radius: 999px; background: var(--color-primary); color: #fff !important; font-size: 15px; font-weight: 900; text-decoration: none; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+    .member-profile-actions a.secondary { background: #fff; color: var(--color-primary) !important; }
+    .member-profile-actions a:hover, .member-profile-actions a:focus-visible { border-color: var(--color-cta); background: var(--color-cta); color: #fff !important; transform: translateY(-2px); }
+    .member-profile-details { max-width: 980px; margin: 42px auto 0; }
+    .member-accordion { border-top: 1px solid var(--color-border); }
+    .member-accordion:last-child { border-bottom: 1px solid var(--color-border); }
+    .member-accordion__button { display: flex; width: 100%; min-height: 72px; align-items: center; justify-content: space-between; gap: 22px; padding: 18px 0; border: 0; background: transparent; color: var(--color-primary-dark); cursor: pointer; font: 900 clamp(18px, 3vw, 24px)/1.25 var(--font-heading); text-align: left; }
+    .member-accordion__button::after { width: 12px; height: 12px; flex: 0 0 auto; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; content: ''; transform: rotate(45deg) translateY(-3px); transition: transform .2s ease; }
+    .member-accordion__button[aria-expanded="true"]::after { transform: rotate(225deg) translate(-3px, -3px); }
+    .member-accordion__panel { padding: 0 0 28px; }
+    .member-accordion__panel[hidden] { display: none; }
+    .member-accordion__panel p, .member-accordion__panel li { color: var(--color-muted); font-size: 17px; line-height: 1.7; }
+    .member-accordion__panel p { margin: 0; }
+    .member-accordion__panel ul { display: grid; gap: 10px; margin: 0; padding-left: 22px; }
+    .member-missing { max-width: 720px; margin: 72px auto; padding: 38px; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); text-align: center; }
+    .member-missing h1 { margin: 0; color: var(--color-primary-dark); font-size: clamp(28px, 5vw, 42px); }
+    .member-missing p { margin: 16px 0 0; color: var(--color-muted); font-size: 17px; line-height: 1.65; }
+    .member-missing a { display: inline-flex; min-height: 44px; align-items: center; margin-top: 24px; padding: 0 18px; border-radius: 999px; background: var(--color-primary); color: #fff !important; font-weight: 900; text-decoration: none; }
+    @media (max-width: 720px) {
+      .member-breadcrumb { padding: 22px 0; }
+      .member-profile-card { grid-template-columns: 1fr; }
+      .member-profile-photo { min-height: 0; aspect-ratio: 4 / 3; }
+      .member-profile-content { padding: 30px 24px 34px; }
+      .member-profile-card::after { top: 42%; right: -25%; }
+      .member-profile-role { font-size: 18px; }
+      .member-profile-org { font-size: 16px; }
+      .member-profile-details { margin-top: 30px; }
+      .member-accordion__button { min-height: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-loader" role="status" aria-live="polite"><span class="page-loader__scene" aria-hidden="true"><span class="page-loader__track"></span><span class="page-loader__landscape" aria-hidden="true"><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span></span><span class="page-loader__train"><span class="page-loader__engine"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span></span></span><p class="page-loader__text">Loading</p></div>
+  <div class="wrapper" id="wrapper">
+    <div class="site-masthead">
+      <header class="header">
+        <a class="blog-logo" href="index.html" title="VIN-SSUM" rel="home">
+          <img src="assets/images/logo_no description.png" alt="VIN-SSUM">
+          <span class="logo-wordmark"><span>VIN</span>-SSUM</span>
+          <span class="logo-subtitle">Vin Sustainable and Smart Urban Mobility Lab</span>
+        </a>
+      </header>
+      <nav class="navigation bg-dark" aria-label="Primary navigation">
+        <div class="section-inner"><ul class="main-menu">
+          <li class="menu-item"><a href="index.html">About</a></li><li class="menu-item"><a href="research.html">Research</a></li><li class="menu-item current-menu-item"><a href="team.html" aria-current="page">Team</a></li><li class="menu-item"><a href="publication.html">Publication</a></li><li class="menu-item"><a href="projects.html">Projects</a></li><li class="menu-item"><a href="news.html">News</a></li><li class="menu-item"><a href="photo.html">Photo</a></li><li class="menu-item"><a href="contact.html">Contact Us</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <main>
+      <div class="member-profile" data-member-profile></div>
+    </main>
+    <footer class="site-footer"><div class="site-footer-inner"><section class="site-footer-brand" aria-label="Lab summary"><h2>Vin Sustainable and Smart Urban Mobility Lab</h2><p>Smart Green Transformation Center (GREEN-X), VinUniversity</p><p>Advancing sustainable, smart, and human-centered urban mobility through transport behaviour, traffic safety, modelling, economics, and policy research.</p></section><section class="site-footer-contact" aria-label="Contact"><h2>Contact</h2><p><a href="mailto:vinuni.ssum@gmail.com">vinuni.ssum@gmail.com</a></p><p><a href="tel:+84325752130">+84 325 752 130</a></p><p>VinUniversity, Vinhomes Ocean Park</p><p>Gia Lam District, Hanoi, Vietnam</p></section><section class="site-footer-connect" aria-label="Copyright"><p class="site-footer-copyright">&copy; 2026 VIN-SSUM Lab.</p></section></div></footer>
+  </div>
+  <script src="js/member-profiles.js"></script>
+  <script src="js/scroll-experience.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/back-to-top.js"></script>
+  <script src="js/page-transition.js"></script>
+</body>
+</html>
