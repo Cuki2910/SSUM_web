@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('page-loading');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b2448">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Research summary | VIN-SSUM</title>
+  <link rel="icon" type="image/png" href="assets/images/logo_no description.png">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/scroll-experience.css">
+  <style>
+    main { padding: 0 0 var(--space-section); background: #fff; }
+    .research-detail { width: min(920px, 90%); margin: 0 auto; }
+    .research-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 28px 0; color: var(--color-muted); font-size: 15px; font-weight: 700; }
+    .research-breadcrumb a { color: var(--color-muted); text-decoration: none; }
+    .research-breadcrumb a:hover, .research-breadcrumb a:focus-visible { color: var(--color-primary); }
+    .research-breadcrumb [aria-hidden="true"] { color: var(--color-border); }
+    .research-breadcrumb [aria-current="page"] { color: var(--color-primary-dark); }
+    .research-detail-hero { position: relative; overflow: hidden; border-radius: var(--radius-card); box-shadow: var(--shadow-soft); }
+    .research-detail-hero img { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+    .research-detail-eyebrow { display: inline-flex; align-items: center; margin: 32px 0 12px; padding: 0 11px; min-height: 30px; border-radius: 999px; background: var(--color-cta); color: #fff; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    .research-detail h1 { margin: 0 0 20px; color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(32px, 5vw, 48px); line-height: 1.1; }
+    .research-detail-body p { margin: 0 0 18px; color: var(--color-text); font-size: 17px; line-height: 1.7; }
+    .research-missing { max-width: 720px; margin: 72px auto; padding: 38px; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); text-align: center; }
+    .research-missing h1 { margin: 0; color: var(--color-primary-dark); font-size: clamp(28px, 5vw, 42px); }
+    .research-missing p { margin: 16px 0 0; color: var(--color-muted); font-size: 17px; line-height: 1.65; }
+    .research-missing a { display: inline-flex; min-height: 44px; align-items: center; margin-top: 24px; padding: 0 18px; border-radius: 999px; background: var(--color-primary); color: #fff !important; font-weight: 900; text-decoration: none; }
+    @media (max-width: 720px) {
+      .research-breadcrumb { padding: 22px 0; }
+      .research-detail-eyebrow { margin-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-loader" role="status" aria-live="polite"><span class="page-loader__scene" aria-hidden="true"><span class="page-loader__track"></span><span class="page-loader__landscape" aria-hidden="true"><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span></span><span class="page-loader__train"><span class="page-loader__engine"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span></span></span><p class="page-loader__text">Loading</p></div>
+  <div class="wrapper" id="wrapper">
+    <div class="site-masthead">
+      <header class="header">
+        <a class="blog-logo" href="index.html" title="VIN-SSUM" rel="home">
+          <img src="assets/images/logo_no description.png" alt="VIN-SSUM">
+          <span class="logo-wordmark"><span>VIN</span>-SSUM</span>
+          <span class="logo-subtitle">Vin Sustainable and Smart Urban Mobility Lab</span>
+        </a>
+      </header>
+      <nav class="navigation bg-dark" aria-label="Primary navigation">
+        <div class="section-inner"><ul class="main-menu">
+          <li class="menu-item"><a href="index.html">About</a></li><li class="menu-item current-menu-item"><a href="research.html" aria-current="page">Research</a></li><li class="menu-item"><a href="team.html">Team</a></li><li class="menu-item"><a href="publication.html">Publication</a></li><li class="menu-item"><a href="projects.html">Projects</a></li><li class="menu-item"><a href="news.html">News</a></li><li class="menu-item"><a href="photo.html">Photo</a></li><li class="menu-item"><a href="contact.html">Contact Us</a></li>
+        </ul></div>
+      </nav>
+    </div>
+    <main>
+      <div class="research-detail" data-research-detail></div>
+    </main>
+    <footer class="site-footer"><div class="site-footer-inner"><section class="site-footer-brand" aria-label="Lab summary"><h2>Vin Sustainable and Smart Urban Mobility Lab</h2><p>Smart Green Transformation Center (GREEN-X), VinUniversity</p><p>Advancing sustainable, smart, and human-centered urban mobility through transport behaviour, traffic safety, modelling, economics, and policy research.</p></section><section class="site-footer-contact" aria-label="Contact"><h2>Contact</h2><p><a href="mailto:vinuni.ssum@gmail.com">vinuni.ssum@gmail.com</a></p><p><a href="tel:+84325752130">+84 325 752 130</a></p><p>VinUniversity, Vinhomes Ocean Park</p><p>Gia Lam District, Hanoi, Vietnam</p></section><section class="site-footer-connect" aria-label="Copyright"><p class="site-footer-copyright">&copy; 2026 VIN-SSUM Lab.</p></section></div></footer>
+  </div>
+  <script src="js/research-detail.js"></script>
+  <script src="js/scroll-experience.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/back-to-top.js"></script>
+  <script src="js/page-transition.js"></script>
+</body>
+</html>

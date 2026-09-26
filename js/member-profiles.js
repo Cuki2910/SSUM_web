@@ -4,7 +4,7 @@
   var members = {
     'nguyen-phuoc-quy-duy': {
       name: 'Nguyen Phuoc Quy Duy, PhD',
-      photo: 'assets/images/member/Quy-Duy.webp',
+      photo: 'assets/images/member/full body/thầy DUy.jpg',
       role: 'Associate Professor, VinUniversity',
       organisation: 'Vin Sustainable and Smart Urban Mobility Lab (VIN-SSUM)',
       label: 'Lab Director',
@@ -113,7 +113,7 @@
     if (Array.isArray(member.awards) && member.awards.length) details.push(makeAccordion(slug + '-awards', 'Selected awards & honors', '<ul>' + member.awards.map(function (award) { return '<li>' + escapeHtml(award) + '</li>'; }).join('') + '</ul>'));
 
     document.title = member.name + ' | VIN-SSUM';
-    root.innerHTML = '<nav class="member-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="team.html">Team</a><span aria-hidden="true">/</span><span aria-current="page">' + escapeHtml(member.name) + '</span></nav><article class="member-profile-card"><img class="member-profile-photo" src="' + escapeHtml(member.photo) + '" alt="' + escapeHtml(member.name) + '"><div class="member-profile-content"><p class="member-profile-eyebrow">' + escapeHtml(member.label || 'VIN-SSUM member') + '</p><h1>' + escapeHtml(member.name) + '</h1><p class="member-profile-role">' + escapeHtml(member.role) + '</p><p class="member-profile-org">' + escapeHtml(member.organisation) + '</p>' + (actions.length ? '<div class="member-profile-actions">' + actions.join('') + '</div>' : '') + '</div></article>' + (details.length ? '<div class="member-profile-details">' + details.join('') + '</div>' : '');
+    root.innerHTML = '<nav class="member-breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><a href="team.html">Team</a><span aria-hidden="true">/</span><span aria-current="page">' + escapeHtml(member.name) + '</span></nav><article class="member-profile-card' + (slug === 'nguyen-phuoc-quy-duy' ? ' member-profile-card--director' : '') + '"><img class="member-profile-photo" src="' + escapeHtml(member.photo) + '" alt="' + escapeHtml(member.name) + '"><div class="member-profile-content"><p class="member-profile-eyebrow">' + escapeHtml(member.label || 'VIN-SSUM member') + '</p><h1>' + escapeHtml(member.name) + '</h1><p class="member-profile-role">' + escapeHtml(member.role) + '</p><p class="member-profile-org">' + escapeHtml(member.organisation) + '</p>' + (actions.length ? '<div class="member-profile-actions">' + actions.join('') + '</div>' : '') + '</div></article>' + (details.length ? '<div class="member-profile-details">' + details.join('') + '</div>' : '');
 
     root.querySelectorAll('.member-accordion__button').forEach(function (button) {
       button.addEventListener('click', function () {

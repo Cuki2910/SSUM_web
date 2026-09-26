@@ -21,6 +21,12 @@
     .team-section { padding: var(--space-section) 0; border-top: 1px solid var(--color-border); }
     .team-section.is-compact { padding: 36px 0; }
     .team-section:first-of-type { border-top: 0; }
+    .section-hero { position: relative; isolation: isolate; display: flex; min-height: clamp(220px, 26vw, 300px); align-items: center; justify-content: center; overflow: hidden; margin-bottom: 48px; padding: 48px 24px; background: linear-gradient(180deg, rgba(11, 36, 72, .74) 0%, rgba(11, 36, 72, .58) 100%), url('assets/images/vinuni_banner.webp') center/cover no-repeat; text-align: center; }
+    .section-hero__inner { position: relative; z-index: 1; max-width: 720px; }
+    .section-hero h1 { margin: 0; color: #fff; font-family: var(--font-heading); font-size: clamp(32px, 5vw, 56px); line-height: 1.1; }
+    .section-hero p { margin: 14px 0 0; color: rgba(255, 255, 255, .86); font-size: clamp(16px, 2vw, 20px); line-height: 1.6; }
+    @media (max-width: 520px) { .section-hero { min-height: 200px; padding: 36px 20px; } }
+    .section-hero + .team-section { padding-top: 0; }
     .section-head { display: flex; gap: 20px; align-items: flex-end; justify-content: space-between; margin-bottom: 24px; }
     .section-head.member-subhead { margin-top: 38px; }
     .section-head h2 { margin: 0; color: #111827; font-size: clamp(26px, 4vw, 42px); line-height: 1.08; }
@@ -80,7 +86,28 @@
       .member-tab { min-height: 44px; padding: 0 16px; font-size: 16px; }
     }
     .person-card { background: linear-gradient(135deg, #ffffff 0%, #ffffff 72%, #effaf4 100%); }
-    .person-card:hover { border-color: #bfe5ce; box-shadow: 0 14px 28px rgba(22, 128, 107, .1); }  </style>
+    .person-card { background: linear-gradient(135deg, #ffffff 0%, #ffffff 72%, #f3f8fe 100%); }
+    .person-card:hover { border-color: #bfd9f1; box-shadow: 0 14px 28px rgba(20, 104, 173, .1); }
+    .director-feature .section-head { justify-content: center; align-items: center; margin-bottom: 24px; }
+    .director-feature .section-head h2 { padding: 0 16px; color: var(--color-primary-dark); font-size: 14px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .director-feature .person-grid { display: block; }
+    .director-feature .person-card.is-featured { position: relative; display: grid; grid-template-areas: 'copy portrait'; grid-template-columns: minmax(0, 1fr) minmax(280px, 36%); min-height: 470px; max-width: none; overflow: hidden; border: 0; border-radius: 18px; background: linear-gradient(120deg, #0b2448 0%, #134d8b 64%, #176caf 100%); box-shadow: 0 24px 52px rgba(11, 36, 72, .22); }
+    .director-feature .person-card.is-featured::before { position: absolute; top: -35%; right: 18%; width: 46%; aspect-ratio: 1; border: 1px solid rgba(255, 255, 255, .12); content: ''; transform: rotate(45deg); }
+    .director-feature .person-photo { grid-area: portrait; z-index: 1; height: 100% !important; aspect-ratio: auto !important; object-fit: cover; object-position: 58% 24%; }
+    .director-feature .person-body { z-index: 1; grid-area: copy; justify-content: center; padding: clamp(34px, 5vw, 68px) !important; color: #fff; }
+    .director-feature .person-body h3 { margin-bottom: 14px; color: #fff; font-size: clamp(28px, 3vw, 42px); }
+    .director-feature .person-role, .director-feature .person-body p { color: rgba(255, 255, 255, .86); }
+    .director-feature .person-role { font-size: 17px; }
+    .director-feature .tag-row span { border-color: rgba(255, 255, 255, .3); color: #fff; }
+    .director-feature .profile-actions a { border-color: #fff; background: #fff; color: var(--color-primary-dark) !important; }
+    .director-feature .profile-actions a:hover, .director-feature .profile-actions a:focus-visible { border-color: var(--color-accent); background: var(--color-accent); }
+    @media (max-width: 900px) { .director-feature .person-card.is-featured { display: flex; min-height: 0; flex-direction: column-reverse; } .director-feature .person-photo { width: 100%; height: min(110vw, 540px) !important; object-position: 58% 20%; } }
+    .assistants-grid { display: grid; gap: 20px; }
+    .person-card.is-wide { position: relative; display: grid; grid-template-areas: 'copy portrait'; grid-template-columns: minmax(0, 1fr) minmax(220px, 34%); min-height: 200px; border-radius: 18px; }
+    .person-card.is-wide .person-photo { grid-area: portrait; height: 100% !important; aspect-ratio: auto !important; object-fit: cover; object-position: center 20%; }
+    .person-card.is-wide .person-body { grid-area: copy; display: flex; flex-direction: column; justify-content: center; padding: 26px 30px !important; }
+    @media (max-width: 900px) { .person-card.is-wide { display: flex; min-height: 0; flex-direction: column-reverse; } .person-card.is-wide .person-photo { width: 100%; height: min(80vw, 320px) !important; } }
+  </style>
 </head>
 <body>
   <div class="page-loader" role="status" aria-live="polite"><span class="page-loader__scene" aria-hidden="true"><span class="page-loader__track"></span><span class="page-loader__landscape" aria-hidden="true"><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span><span class="page-loader__sprout"></span></span><span class="page-loader__train"><span class="page-loader__engine"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span><span class="page-loader__car"><span class="page-loader__window"></span></span></span></span><p class="page-loader__text">Loading</p></div>
@@ -109,22 +136,15 @@
       </nav>
     </div>
     <main>
-      <section class="team-hero" aria-labelledby="team-title">
-        <div class="team-inner">
-          <span class="team-kicker">Team</span>
-          <h1 id="team-title">The people behind VIN-SSUM.</h1>
-          <p>A concise directory of the lab director, students, research assistants, alumni, and collaborators shaping sustainable and smart urban mobility research.</p>
-        </div>
-      </section>
-
-      <section class="team-section" aria-labelledby="director-title">
+      <section class="section-hero"><div class="section-hero__inner"><h1>Meet the Team</h1><p>Researchers and student assistants advancing VIN-SSUM's mission across mobility and safety studies.</p></div></section>
+      <section class="team-section director-feature" aria-labelledby="director-title">
         <div class="team-inner">
           <div class="section-head">
             <h2 id="director-title">Lab Director</h2>
           </div>
           <div class="person-grid">
             <article class="person-card is-featured">
-              <img class="person-photo" src="assets/images/member/Quy-Duy.webp" alt="Nguyen Phuoc Quy Duy">
+              <img class="person-photo" src="assets/images/member/director-duy-cutout.png" alt="Nguyen Phuoc Quy Duy">
               <div class="person-body">
                 <h3>Nguyen Phuoc Quy Duy, PhD</h3>
                 <p class="person-role">Associate Professor, VinUniversity</p>
@@ -160,90 +180,77 @@
           <div class="section-head">
             <h2 id="assistants-title">Research Assistants</h2>
           </div>
-          <div class="member-tabs" role="tablist" aria-label="Research assistant groups">
-            <button class="member-tab" type="button" role="tab" id="ra-tab" aria-controls="ra-panel" aria-selected="true" data-member-tab="ra-panel">Research Assistants</button>
-            <button class="member-tab" type="button" role="tab" id="undergrad-ra-tab" aria-controls="undergrad-ra-panel" aria-selected="false" data-member-tab="undergrad-ra-panel">Undergraduate Student RAs</button>
-          </div>
-          <div id="ra-panel" class="member-panel" role="tabpanel" aria-labelledby="ra-tab">
-            <div class="member-list">
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/quang-nhat-card.jpg" alt="Vo Dinh Quang Nhat">
+          <div class="assistants-grid">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/quang-nhat-card.jpg" alt="Vo Dinh Quang Nhat, MSc">
                 <div class="person-body">
                   <h3>Vo Dinh Quang Nhat, MSc</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
-                  <div class="profile-actions">
-                    <a href="member-profile.html?member=vo-dinh-quang-nhat">Xem thêm</a>
-                  </div>
+                  <div class="tag-row" aria-label="Research interests"><span>Sustainable Transportation</span><span>Transport Modelling</span><span>Urban Innovation</span></div>
+                  <div class="profile-actions"><a href="member-profile.html?member=vo-dinh-quang-nhat">Xem thêm</a></div>
                 </div>
               </article>
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/minh-ngan-card.jpg" alt="Ho Thi Minh Ngan">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/minh-ngan-card.jpg" alt="Ho Thi Minh Ngan">
                 <div class="person-body">
                   <h3>Ho Thi Minh Ngan</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+                  <div class="tag-row" aria-label="Research interests"><span>Travel Behaviour</span><span>Traffic Safety</span><span>Sustainable Transportation</span></div>
                   <div class="profile-actions"><a href="member-profile.html?member=ho-thi-minh-ngan">Xem thêm</a></div>
                 </div>
               </article>
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/hang-card.jpg" alt="Nguyen Thu Hang">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/hang-card.jpg" alt="Nguyen Thu Hang">
                 <div class="person-body">
                   <h3>Nguyen Thu Hang</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
-                  <div class="profile-actions">
-                    <a href="member-profile.html?member=nguyen-thu-hang">Xem thêm</a>
-                  </div>
+                  <div class="tag-row" aria-label="Research interests"><span>Urban Innovation</span><span>Travel Behaviour</span><span>Traffic Safety</span></div>
+                  <div class="profile-actions"><a href="member-profile.html?member=nguyen-thu-hang">Xem thêm</a></div>
                 </div>
               </article>
-            </div>
-          </div>
-          <div id="undergrad-ra-panel" class="member-panel" role="tabpanel" aria-labelledby="undergrad-ra-tab" hidden>
-            <div class="member-list">
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/dang-tuan-kiet-card.jpg" alt="Dang Tuan Kiet">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/dang-tuan-kiet-card.jpg" alt="Dang Tuan Kiet">
                 <div class="person-body">
                   <h3>Dang Tuan Kiet</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
-                  <div class="profile-actions">
-                    <a href="member-profile.html?member=dang-tuan-kiet">Xem thêm</a>
-                  </div>
+                  <div class="tag-row" aria-label="Research interests"><span>Traffic Safety</span><span>Sustainable Transportation</span><span>Travel Behaviour</span></div>
+                  <div class="profile-actions"><a href="member-profile.html?member=dang-tuan-kiet">Xem thêm</a></div>
                 </div>
               </article>
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/le-nhat-minh-card.jpg" alt="Le Nhat Minh">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/le-nhat-minh-card.jpg" alt="Le Nhat Minh">
                 <div class="person-body">
                   <h3>Le Nhat Minh</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
-                  <div class="profile-actions">
-                    <a href="member-profile.html?member=le-nhat-minh">Xem thêm</a>
-                  </div>
+                  <div class="tag-row" aria-label="Research interests"><span>Sustainable Transportation</span><span>Urban Innovation</span><span>Travel Behaviour</span></div>
+                  <div class="profile-actions"><a href="member-profile.html?member=le-nhat-minh">Xem thêm</a></div>
                 </div>
               </article>
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/tam-card.jpg" alt="Le Huy Tam">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/tam-card.jpg" alt="Le Huy Tam">
                 <div class="person-body">
                   <h3>Le Huy Tam</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
+                  <div class="tag-row" aria-label="Research interests"><span>Travel Behaviour</span><span>Traffic Safety</span><span>Urban Innovation</span></div>
                   <div class="profile-actions"><a href="member-profile.html?member=le-huy-tam">Xem thêm</a></div>
                 </div>
               </article>
-              <article class="person-card">
-                <img class="person-photo member-photo" src="assets/images/member/card/thuy-ngan-card.jpg" alt="Vo Thuy Ngan">
+              <article class="person-card is-wide">
+                <img class="person-photo" src="assets/images/member/card/thuy-ngan-card.jpg" alt="Vo Thuy Ngan">
                 <div class="person-body">
                   <h3>Vo Thuy Ngan</h3>
                   <p class="person-role">Research Assistant</p>
                   <p class="member-org">Smart Green Transformation Center (GREEN-X), VinUniversity</p>
-                  <div class="profile-actions">
-                    <a href="member-profile.html?member=vo-thuy-ngan">Xem thêm</a>
-                  </div>
+                  <div class="tag-row" aria-label="Research interests"><span>Urban Innovation</span><span>Sustainable Transportation</span><span>Traffic Safety</span></div>
+                  <div class="profile-actions"><a href="member-profile.html?member=vo-thuy-ngan">Xem thêm</a></div>
                 </div>
               </article>
-            </div>
           </div>
         </div>
       </section>
