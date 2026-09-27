@@ -184,10 +184,19 @@ function compareBox(failures, file, viewport, key, ref, cur, props = ['width', '
   if (await page.getByRole('button', { name: 'Selected awards & honors' }).count() !== 1) failures.push('Duy profile: awards section missing');
   if (await page.locator('#nguyen-phuoc-quy-duy-awards li').count() !== 6) failures.push('Duy profile: expected 6 awards');
 
-  await page.goto('http://127.0.0.1:4173/member-profile.html?member=nguyen-thu-hang');
+  await page.goto('http://127.0.0.1:4173/team.html');
   await page.waitForLoadState('networkidle');
-  if (await page.getByRole('link', { name: 'View CV' }).count() !== 1) failures.push('Hang profile: CV link missing');
-  if (await page.getByRole('link', { name: 'LinkedIn' }).count() !== 1) failures.push('Hang profile: LinkedIn link missing');
+  const allMemberActions = page.locator('.person-card .profile-actions');
+  if (await allMemberActions.count() !== 8) failures.push('Team cards: expected actions for all eight members');
+  for (let index = 0; index < await allMemberActions.count(); index += 1) {
+    const labels = await allMemberActions.nth(index).locator(':scope > *').allTextContents();
+    const expected = index === 0 ? 'LinkedIn|Personal website|Xem thêm' : 'LinkedIn|View CV|Xem thêm';
+    if (labels.join('|') !== expected) failures.push('Team card ' + (index + 1) + ': action order invalid');
+  }
+  const hangActions = page.locator('article:has(h3:text-is("Nguyen Thu Hang")) .profile-actions');
+  if (await hangActions.getByRole('link', { name: 'LinkedIn' }).count() !== 1) failures.push('Hang card: LinkedIn link missing');
+  if (await hangActions.getByRole('link', { name: 'View CV' }).count() !== 1) failures.push('Hang card: CV link missing');
+  if (await hangActions.getByRole('link', { name: 'Xem thêm' }).count() !== 1) failures.push('Hang card: detail link missing');
 
   await page.goto('http://127.0.0.1:4173/member-profile.html?member=ho-thi-minh-ngan');
   await page.waitForLoadState('networkidle');

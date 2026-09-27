@@ -103,9 +103,7 @@
     var actions = [];
     var details = [];
 
-    if (member.linkedin) actions.push('<a href="' + escapeHtml(member.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a>');
     if (member.website) actions.push('<a class="secondary" href="' + escapeHtml(member.website) + '" target="_blank" rel="noopener">Personal website</a>');
-    if (member.cv) actions.push('<a class="secondary" href="' + escapeHtml(member.cv) + '" target="_blank" rel="noopener">View CV</a>');
     if (member.bio) details.push(makeAccordion(slug + '-introduction', 'Introduction', '<p>' + escapeHtml(member.bio) + '</p>'));
     if (Array.isArray(member.topics) && member.topics.length) details.push(makeAccordion(slug + '-research-topics', 'Research interests', '<ul>' + member.topics.map(function (topic) { return '<li>' + escapeHtml(topic) + '</li>'; }).join('') + '</ul>'));
     if (Array.isArray(member.researchTitles) && member.researchTitles.length) details.push(makeAccordion(slug + '-research-projects', 'Current research', '<ul>' + member.researchTitles.map(function (title) { return '<li>' + escapeHtml(title) + '</li>'; }).join('') + '</ul>'));
