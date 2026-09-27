@@ -11,9 +11,19 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/scroll-experience.css">
+  <link rel="stylesheet" href="css/lab-content.css">
   <style>
     main { padding: 0 0 var(--space-section); background: #fff; }
     .research-detail { width: min(920px, 90%); margin: 0 auto; }
+    .research-page-hero { margin-bottom: 0; }
+    .research-topic-bar { width: 100%; border-bottom: 1px solid var(--color-border); background: #fff; }
+    .research-topic-tabs { display: grid; width: min(1500px, 100%); grid-template-columns: repeat(7, minmax(0, 1fr)); margin: 0 auto; scrollbar-width: thin; }
+    .research-topic-tabs a { position: relative; min-height: 72px; display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; color: var(--color-text); font-size: 14px; font-weight: 700; line-height: 1.3; text-align: center; text-decoration: none; }
+    .research-topic-tabs a::after { position: absolute; right: 18px; bottom: 0; left: 18px; height: 4px; background: var(--color-primary-dark); content: ''; opacity: 0; transform: scaleX(.4); transition: opacity .2s ease, transform .2s ease; }
+    .research-topic-tabs a[aria-current="page"] { color: var(--color-primary-dark); font-weight: 900; }
+    .research-topic-tabs a[aria-current="page"]::after { opacity: 1; transform: scaleX(1); }
+    .research-topic-tabs a:hover, .research-topic-tabs a:focus-visible { background: color-mix(in srgb, var(--color-accent) 22%, transparent); color: var(--color-primary-dark); }
+    .research-topic-tabs a:focus-visible { outline: 3px solid color-mix(in srgb, var(--color-accent) 76%, white); outline-offset: -3px; }
     .research-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 28px 0; color: var(--color-muted); font-size: 15px; font-weight: 700; }
     .research-breadcrumb a { color: var(--color-muted); text-decoration: none; }
     .research-breadcrumb a:hover, .research-breadcrumb a:focus-visible { color: var(--color-primary); }
@@ -21,6 +31,7 @@
     .research-breadcrumb [aria-current="page"] { color: var(--color-primary-dark); }
     .research-detail-hero { position: relative; overflow: hidden; border-radius: var(--radius-card); box-shadow: var(--shadow-soft); }
     .research-detail-hero img { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
+    .research-detail-hero--graphic { aspect-ratio: 16 / 8; background: linear-gradient(135deg, transparent 0 28%, rgba(255, 255, 255, .08) 28% 48%, transparent 48%), linear-gradient(45deg, transparent 0 46%, rgba(3, 27, 69, .2) 46% 71%, transparent 71%), #134d8b; }
     .research-detail-eyebrow { display: inline-flex; align-items: center; margin: 32px 0 12px; padding: 0 11px; min-height: 30px; border-radius: 999px; background: var(--color-cta); color: #fff; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
     .research-detail h1 { margin: 0 0 20px; color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(32px, 5vw, 48px); line-height: 1.1; }
     .research-detail-body p { margin: 0 0 18px; color: var(--color-text); font-size: 17px; line-height: 1.7; }
@@ -29,6 +40,8 @@
     .research-missing p { margin: 16px 0 0; color: var(--color-muted); font-size: 17px; line-height: 1.65; }
     .research-missing a { display: inline-flex; min-height: 44px; align-items: center; margin-top: 24px; padding: 0 18px; border-radius: 999px; background: var(--color-primary); color: #fff !important; font-weight: 900; text-decoration: none; }
     @media (max-width: 720px) {
+      .research-topic-tabs { display: flex; overflow-x: auto; }
+      .research-topic-tabs a { flex: 0 0 148px; min-height: 64px; }
       .research-breadcrumb { padding: 22px 0; }
       .research-detail-eyebrow { margin-top: 24px; }
     }
@@ -47,11 +60,13 @@
       </header>
       <nav class="navigation bg-dark" aria-label="Primary navigation">
         <div class="section-inner"><ul class="main-menu">
-          <li class="menu-item"><a href="index.html">About</a></li><li class="menu-item current-menu-item"><a href="research.html" aria-current="page">Research</a></li><li class="menu-item"><a href="team.html">Team</a></li><li class="menu-item"><a href="publication.html">Publication</a></li><li class="menu-item"><a href="projects.html">Projects</a></li><li class="menu-item"><a href="news.html">News</a></li><li class="menu-item"><a href="photo.html">Photo</a></li><li class="menu-item"><a href="contact.html">Contact Us</a></li>
+          <li class="menu-item"><a href="index.html">About</a></li><li class="menu-item current-menu-item"><a href="research.html" aria-current="page">Research</a></li><li class="menu-item"><a href="team.html">Team</a></li><li class="menu-item"><a href="publication.html">Publications</a></li><li class="menu-item"><a href="projects.html">Projects</a></li><li class="menu-item"><a href="news.html">News</a></li><li class="menu-item"><a href="photo.html">Photo</a></li><li class="menu-item"><a href="contact.html">Contact Us</a></li>
         </ul></div>
       </nav>
     </div>
     <main>
+      <section class="section-hero research-page-hero"><div class="section-hero__inner"><h1>Research Focus</h1><p>Seven research themes driving sustainable, safe, and intelligent urban mobility.</p></div></section>
+      <section class="research-topic-bar"><nav class="research-topic-tabs" data-research-topic-tabs aria-label="Research focus topics"></nav></section>
       <div class="research-detail" data-research-detail></div>
     </main>
     <footer class="site-footer"><div class="site-footer-inner"><section class="site-footer-brand" aria-label="Lab summary"><h2>Vin Sustainable and Smart Urban Mobility Lab</h2><p>Smart Green Transformation Center (GREEN-X), VinUniversity</p><p>Advancing sustainable, smart, and human-centered urban mobility through transport behaviour, traffic safety, modelling, economics, and policy research.</p></section><section class="site-footer-contact" aria-label="Contact"><h2>Contact</h2><p><a href="mailto:vinuni.ssum@gmail.com">vinuni.ssum@gmail.com</a></p><p><a href="tel:+84325752130">+84 325 752 130</a></p><p>VinUniversity, Vinhomes Ocean Park</p><p>Gia Lam District, Hanoi, Vietnam</p></section><section class="site-footer-connect" aria-label="Copyright"><p class="site-footer-copyright">&copy; 2026 VIN-SSUM Lab.</p></section></div></footer>
