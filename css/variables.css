@@ -12,6 +12,6 @@
   --space-card: clamp(20px, 3vw, 32px);
   --radius-card: 14px;
   --shadow-soft: 0 18px 45px rgba(11, 36, 72, .08);
-  --font-heading: "Montserrat", Arial, sans-serif;
+  --font-heading: "Newsreader", Georgia, "Times New Roman", serif;
   --font-body: "Mulish", Arial, sans-serif;
 }

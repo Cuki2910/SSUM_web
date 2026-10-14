@@ -578,7 +578,7 @@ main:has(.section-hero) {
   color: rgba(19, 77, 139, .12);
   font-family: var(--font-heading);
   font-size: clamp(48px, 6vw, 82px);
-  font-weight: 900;
+  font-weight: 500;
   letter-spacing: -.08em;
   line-height: 1;
   content: counter(manifesto, decimal-leading-zero);
@@ -681,7 +681,7 @@ main:has(.section-hero) {
   color: var(--color-primary);
   font-family: var(--font-heading);
   font-size: 14px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -998,7 +998,7 @@ main:has(.section-hero) {
   color: currentColor;
   font-family: var(--font-heading);
   font-size: clamp(21px, 2.2vw, 28px);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.18;
 }
 

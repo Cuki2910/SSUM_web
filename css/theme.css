@@ -19,6 +19,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-heading);
+  font-weight: 500;
 }
 
 img {
@@ -104,7 +105,7 @@ select:focus-visible {
   color: #fff;
   font-family: var(--font-heading);
   font-size: clamp(21px, 2vw, 30px);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: .06em;
   line-height: 1;
 }
