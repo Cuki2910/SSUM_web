@@ -87,6 +87,7 @@
     'le-huy-tam': {
       name: 'Le Huy Tam',
       cv: 'assets/cv/le-huy-tam-cv.pdf',
+      linkedin: 'https://www.linkedin.com/in/lehuytam/',
       photo: 'assets/images/member/card/tam-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
