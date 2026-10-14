@@ -1208,3 +1208,7 @@ main:has(.section-hero) {
     margin-top: 22px;
   }
 }
+
+.project-card + .project-card {
+  margin-top: 22px;
+}
