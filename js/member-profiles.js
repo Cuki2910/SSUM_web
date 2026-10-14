@@ -34,6 +34,7 @@
     },
     'vo-dinh-quang-nhat': {
       name: 'Vo Dinh Quang Nhat, MSc',
+      cv: 'assets/cv/vo-dinh-quang-nhat-cv.pdf',
       photo: 'assets/images/member/card/quang-nhat-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
@@ -41,6 +42,7 @@
     },
     'ho-thi-minh-ngan': {
       name: 'Ho Thi Minh Ngan',
+      cv: 'assets/cv/ho-thi-minh-ngan-cv.pdf',
       photo: 'assets/images/member/card/minh-ngan-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
@@ -52,11 +54,12 @@
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
       topics: ['Green Behavior', 'Pro-environmental Behavior', 'Green Public Policy'],
       researchTitles: ['Factors Influencing Mobility Behavior Among Persons with Disabilities (PWDs) in Vietnam'],
-      cv: 'assets/images/member/cv/Nguyen%20Thu%20Hang%20CV.pdf',
+      cv: 'assets/cv/nguyen-thu-hang-cv.pdf',
       linkedin: 'https://www.linkedin.com/in/hangnguyen2604/'
     },
     'dang-tuan-kiet': {
       name: 'Dang Tuan Kiet',
+      cv: 'assets/cv/dang-tuan-kiet-cv.pdf',
       photo: 'assets/images/member/card/dang-tuan-kiet-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
@@ -64,6 +67,7 @@
     },
     'le-nhat-minh': {
       name: 'Le Nhat Minh',
+      cv: 'assets/cv/le-nhat-minh-cv.pdf',
       photo: 'assets/images/member/card/le-nhat-minh-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
@@ -71,12 +75,14 @@
     },
     'le-huy-tam': {
       name: 'Le Huy Tam',
+      cv: 'assets/cv/le-huy-tam-cv.pdf',
       photo: 'assets/images/member/card/tam-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
     },
     'vo-thuy-ngan': {
       name: 'Vo Thuy Ngan',
+      cv: 'assets/cv/vo-thuy-ngan-cv.pdf',
       photo: 'assets/images/member/card/thuy-ngan-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
@@ -103,6 +109,7 @@
     var actions = [];
     var details = [];
 
+    if (member.cv) actions.push('<a class="secondary" href="' + escapeHtml(member.cv) + '" target="_blank" rel="noopener">View CV</a>');
     if (member.website) actions.push('<a class="secondary" href="' + escapeHtml(member.website) + '" target="_blank" rel="noopener">Personal website</a>');
     if (member.bio) details.push(makeAccordion(slug + '-introduction', 'Introduction', '<p>' + escapeHtml(member.bio) + '</p>'));
     if (Array.isArray(member.topics) && member.topics.length) details.push(makeAccordion(slug + '-research-topics', 'Research interests', '<ul>' + member.topics.map(function (topic) { return '<li>' + escapeHtml(topic) + '</li>'; }).join('') + '</ul>'));
