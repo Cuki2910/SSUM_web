@@ -8,7 +8,7 @@
       role: 'Associate Professor, VinUniversity',
       organisation: 'Vin Sustainable and Smart Urban Mobility Lab (VIN-SSUM)',
       label: 'Lab Director',
-      topics: ['Sustainable mobility', 'Traffic safety', 'Transport behaviour', 'Transport modelling', 'Transport economics'],
+      topics: ['Urban Planning', 'Smart City', 'Future Mobility', 'Traffic Safety', 'Transport Equity & Accessibility', 'Transport Policy & Demand Management'],
       publications: [
         'Nguyen-Phuoc, D.Q.*, Nguyen, B.V., Vo, D.Q.N & Wong, Y.D., 2025, ‘Riding safely with kids: Uncovering key factors driving parents’ safe riding intentions’. Accident Analysis & Prevention (Q1, A*). Vol 221, pp. 108209. DOI: 10.1016/j.aap.2025.108209',
         'Nguyen-Phuoc, D.Q.*, Pham, S.T.*, Nguyen, T.P.T., Su, D.N., Luu, T.T. & Oviedo-Trespalacios, O., 2025, ‘Exploring the switch to urban train services: the impact of perceived accessibility and its moderating effects’. Transportation Research Part A: Policy and Practice (Q1, A*). Vol 191, 104320. DOI: 10.1016/j.tra.2024.104320',
@@ -43,16 +43,26 @@
     'ho-thi-minh-ngan': {
       name: 'Ho Thi Minh Ngan',
       cv: 'assets/cv/ho-thi-minh-ngan-cv.pdf',
+      linkedin: 'https://www.linkedin.com/in/ngan-ho-minh/',
       photo: 'assets/images/member/card/minh-ngan-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
+    },
+    'tran-thi-hai-yen': {
+      name: 'Tran Thi Hai Yen',
+      photo: 'assets/images/member/card/hai-yen-card.jpg',
+      role: 'Research Assistant',
+      organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
+      topics: ['Urban Planning', 'Smart City', 'Future Mobility', 'Transport Policy & Demand Management'],
+      cv: 'assets/cv/tran-thi-hai-yen-cv.pdf',
+      linkedin: 'https://www.linkedin.com/in/thihaiyentran2001/'
     },
     'nguyen-thu-hang': {
       name: 'Nguyen Thu Hang',
       photo: 'assets/images/member/card/hang-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
-      topics: ['Green Behavior', 'Pro-environmental Behavior', 'Green Public Policy'],
+      topics: ['Transport Equity & Accessibility', 'Transport Policy & Demand Management'],
       researchTitles: ['Factors Influencing Mobility Behavior Among Persons with Disabilities (PWDs) in Vietnam'],
       cv: 'assets/cv/nguyen-thu-hang-cv.pdf',
       linkedin: 'https://www.linkedin.com/in/hangnguyen2604/'
@@ -63,7 +73,8 @@
       photo: 'assets/images/member/card/dang-tuan-kiet-card.jpg',
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
-      linkedin: 'https://www.linkedin.com/in/cuki2910/'
+      linkedin: 'https://www.linkedin.com/in/cuki2910/',
+      github: 'https://github.com/Cuki2910'
     },
     'le-nhat-minh': {
       name: 'Le Nhat Minh',
@@ -110,6 +121,7 @@
     var details = [];
 
     if (member.cv) actions.push('<a class="secondary" href="' + escapeHtml(member.cv) + '" target="_blank" rel="noopener">View CV</a>');
+    if (member.github) actions.push('<a class="secondary" href="' + escapeHtml(member.github) + '" target="_blank" rel="noopener">GitHub</a>');
     if (member.website) actions.push('<a class="secondary" href="' + escapeHtml(member.website) + '" target="_blank" rel="noopener">Personal website</a>');
     if (member.bio) details.push(makeAccordion(slug + '-introduction', 'Introduction', '<p>' + escapeHtml(member.bio) + '</p>'));
     if (Array.isArray(member.topics) && member.topics.length) details.push(makeAccordion(slug + '-research-topics', 'Research interests', '<ul>' + member.topics.map(function (topic) { return '<li>' + escapeHtml(topic) + '</li>'; }).join('') + '</ul>'));

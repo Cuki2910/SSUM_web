@@ -22,6 +22,7 @@ const profileSlugs = [
   'nguyen-phuoc-quy-duy',
   'vo-dinh-quang-nhat',
   'ho-thi-minh-ngan',
+  'tran-thi-hai-yen',
   'nguyen-thu-hang',
   'dang-tuan-kiet',
   'le-nhat-minh',
@@ -187,7 +188,7 @@ function compareBox(failures, file, viewport, key, ref, cur, props = ['width', '
   await page.goto('http://127.0.0.1:4173/team.html');
   await page.waitForLoadState('networkidle');
   const allMemberActions = page.locator('.person-card .profile-actions');
-  if (await allMemberActions.count() !== 8) failures.push('Team cards: expected actions for all eight members');
+  if (await allMemberActions.count() !== 9) failures.push('Team cards: expected actions for all nine members');
   for (let index = 0; index < await allMemberActions.count(); index += 1) {
     const labels = await allMemberActions.nth(index).locator(':scope > *').allTextContents();
     const expected = index === 0 ? 'LinkedIn|Personal website|Xem thêm' : 'LinkedIn|View CV|Xem thêm';
