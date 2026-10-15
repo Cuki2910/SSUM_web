@@ -24,6 +24,7 @@ const profileSlugs = [
   'ho-thi-minh-ngan',
   'tran-thi-hai-yen',
   'nguyen-thu-hang',
+  'vu-huu-an',
   'dang-tuan-kiet',
   'le-nhat-minh',
   'le-huy-tam',

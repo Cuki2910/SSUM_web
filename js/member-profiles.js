@@ -67,6 +67,13 @@
       cv: 'assets/cv/nguyen-thu-hang-cv.pdf',
       linkedin: 'https://www.linkedin.com/in/hangnguyen2604/'
     },
+    'vu-huu-an': {
+      name: 'Vu Huu An',
+      cv: 'assets/cv/vu-huu-an-cv.pdf',
+      photo: 'assets/images/member/card/vu-huu-an-card.jpg',
+      role: 'Research Assistant',
+      organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
+    },
     'dang-tuan-kiet': {
       name: 'Dang Tuan Kiet',
       cv: 'assets/cv/dang-tuan-kiet-cv.pdf',
