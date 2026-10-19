@@ -75,6 +75,183 @@
       ]
     }
   };
+  // Papers shown on each topic page; same records as publication.html (keep in sync when editing).
+  var topicPapers = {
+    "urban-planning": [
+      {
+        "doi": "10.1016/j.tra.2023.103814",
+        "title": "Transit-oriented development and floor area ratio regulation in a transportation corridor: Formulation and a case study",
+        "authors": "DP Yu, ZC Li, B Liu, DQ Nguyen-Phuoc",
+        "venue": "Transportation Research Part A: Policy and Practice, 176, 103814 (2023)"
+      },
+      {
+        "doi": "10.1016/j.tra.2026.104981",
+        "title": "Optimal timetabling and charger deployment for urban–rural electric bus services: Formulation and case study",
+        "authors": "Z Wang, X Bing, ZC Li, DQ Nguyen-Phuoc, X Fu",
+        "venue": "Transportation Research Part A: Policy and Practice, 208, 104981 (2026)"
+      },
+      {
+        "doi": "10.1016/j.tranpol.2024.10.028",
+        "title": "The role of physical and social environments on the loyalty toward urban rail services: A consideration of stations and onboard",
+        "authors": "DQ Nguyen-Phuoc, NT Ho-Mai, TM Truong, MH Nguyen, ZC Li",
+        "venue": "Transport Policy, 159, 328–344 (2024)"
+      },
+      {
+        "doi": "10.1016/j.tbs.2022.01.004",
+        "title": "The roles of physical and social environments on the behavioural intention of passengers to reuse and recommend bus systems",
+        "authors": "DQ Nguyen-Phuoc, DN Su, T Nguyen, NS Vo, ATP Tran, LW Johnson",
+        "venue": "Travel Behaviour and Society, 27, 162–172 (2022)"
+      }
+    ],
+    "smart-city": [
+      {
+        "doi": "10.1016/j.trf.2025.103484",
+        "title": "Driving the shift to electric motorcycles: the role of AI trust and AI benefits",
+        "authors": "DQ Nguyen-Phuoc, TN Ho-Mai, TPT Nguyen, NDQ Vo, TT Luu, DN Su",
+        "venue": "Transportation Research Part F: Traffic Psychology and Behaviour, 118, 103484 (2026)"
+      },
+      {
+        "doi": "10.1007/s00521-020-05318-3",
+        "title": "Developing artificial neural networks to estimate real-time onboard bus ride comfort",
+        "authors": "T Nguyen, DQ Nguyen-Phuoc, YD Wong",
+        "venue": "Neural Computing and Applications, 33(10), 5287–5299 (2021)"
+      },
+      {
+        "doi": "10.1016/j.tra.2021.06.013",
+        "title": "What makes passengers continue using and talking positively about ride-hailing services? The role of the booking app and post-booking service quality",
+        "authors": "DQ Nguyen-Phuoc, NS Vo, DN Su, VH Nguyen, O Oviedo-Trespalacios",
+        "venue": "Transportation Research Part A: Policy and Practice, 150, 367–384 (2021)"
+      },
+      {
+        "doi": "10.1080/19368623.2022.2020199",
+        "title": "Modeling consumers’ trust in mobile food delivery apps: Perspectives of technology acceptance model, mobile service quality and personalization-privacy theory",
+        "authors": "DN Su, NAN Nguyen, LNT Nguyen, TT Luu, DQ Nguyen-Phuoc",
+        "venue": "Journal of Hospitality Marketing & Management, 31(5), 535–569 (2022)"
+      }
+    ],
+    "future-mobility": [
+      {
+        "doi": "10.1016/j.tra.2026.105191",
+        "title": "Value versus cost in post-experience robotaxi use: evidence from a cognitive–affective–conative model",
+        "authors": "DQ Nguyen-Phuoc, FY Wu, TPT Nguyen, DN Su, TT Luu, ZC Li",
+        "venue": "Transportation Research Part A: Policy and Practice, 213, 105191 (2026)"
+      },
+      {
+        "doi": "10.1016/j.tranpol.2026.104392",
+        "title": "How do user–system interaction and AI driving performance influence robotaxi continuance intention through emotional responses?",
+        "authors": "DQ Nguyen-Phuoc, TPT Nguyen, FY Wu, TT Luu, ZC Li",
+        "venue": "Transport Policy, 188, 104392 (2026)"
+      },
+      {
+        "doi": "10.1016/j.tra.2023.103583",
+        "title": "Examining the effects of Automated Mobility-on-Demand services on public transport systems using an agent-based simulation approach",
+        "authors": "DQ Nguyen-Phuoc, M Zhou, MH Chua, AR Alho, S Oh, R Seshadri, DT Le",
+        "venue": "Transportation Research Part A: Policy and Practice, 169, 103583 (2023)"
+      },
+      {
+        "doi": "10.1016/j.rtbm.2025.101534",
+        "title": "How value, cost, and emotions drive electric motorcycle adoption in Vietnam: A cognitive–affective–conative approach",
+        "authors": "B Van Nguyen, DQ Nguyen-Phuoc, NDQ Vo, DN Su, et al.",
+        "venue": "Research in Transportation Business & Management, 64, 101534 (2026)"
+      }
+    ],
+    "traffic-safety": [
+      {
+        "doi": "10.1016/j.aap.2026.108515",
+        "title": "Modified MRBQ for the gig economy: linking risky riding behaviors to self-reported safety incidents among food delivery riders",
+        "authors": "A Pervez, DQ Nguyen-Phuoc, NDQ Vo, JJ Lee",
+        "venue": "Accident Analysis & Prevention, 231, 108515 (2026)"
+      },
+      {
+        "doi": "10.1016/j.aap.2024.107538",
+        "title": "Distracted on duty: A theory-based exploration of influences leading to mobile phone distracted riding among food delivery workers",
+        "authors": "MH Nguyen, DQ Nguyen-Phuoc, NAN Nguyen, O Oviedo-Trespalacios",
+        "venue": "Accident Analysis & Prevention, 202, 107538 (2024)"
+      },
+      {
+        "doi": "10.1016/j.tra.2022.11.002",
+        "title": "Factors influencing road safety compliance among food delivery riders: An extension of the job demands-resources (JD-R) model",
+        "authors": "DQ Nguyen-Phuoc, NAN Nguyen, MH Nguyen, LNT Nguyen, et al.",
+        "venue": "Transportation Research Part A: Policy and Practice, 166, 541–556 (2022)"
+      },
+      {
+        "doi": "10.1016/j.ssci.2022.106007",
+        "title": "Deadly meals: The influence of personal and job factors on burnout and risky riding behaviours of food delivery motorcyclists",
+        "authors": "DQ Nguyen-Phuoc, LNT Nguyen, DN Su, MH Nguyen, et al.",
+        "venue": "Safety Science, 159, 106007 (2023)"
+      },
+      {
+        "doi": "10.1016/j.ssci.2024.106687",
+        "title": "Safety climate and its contribution to safety performance in the food delivery industry",
+        "authors": "DQ Nguyen-Phuoc, TM Truong, NT Ho-Mai, NX Mai, et al.",
+        "venue": "Safety Science, 181, 106687 (2025)"
+      },
+      {
+        "doi": "10.1016/j.kscej.2025.100468",
+        "title": "Electric Two-Wheeler Crashes: Risk Factors and Potential Solutions–A Systematic Review",
+        "authors": "A Pervez, DQ Nguyen-Phuoc, JJ Lee, F Chang, H Munir, S Ahmad",
+        "venue": "KSCE Journal of Civil Engineering, 30(1), 100468 (2025)"
+      }
+    ],
+    "transport-equity-accessibility": [
+      {
+        "doi": "10.1016/j.tra.2024.104320",
+        "title": "Exploring the switch to urban train services: The impact of perceived accessibility and its moderating effects",
+        "authors": "DQ Nguyen-Phuoc, ST Pham, TPT Nguyen, DN Su, TT Luu, et al.",
+        "venue": "Transportation Research Part A: Policy and Practice, 191, 104320 (2025)"
+      },
+      {
+        "doi": "10.1016/j.cities.2021.103345",
+        "title": "Simulating impacts of automated mobility-on-demand on accessibility and residential relocation",
+        "authors": "M Zhou, DT Le, DQ Nguyen-Phuoc, PC Zegras, J Ferreira Jr",
+        "venue": "Cities, 118, 103345 (2021)"
+      },
+      {
+        "doi": "10.1016/j.tranpol.2025.103769",
+        "title": "Influential factors and passenger satisfaction towards integrated urban-rural bus services: A case study of Chibi, China",
+        "authors": "ZC Li, Z Ma, DQ Nguyen-Phuoc, X Fu",
+        "venue": "Transport Policy, 172, 103769 (2025)"
+      },
+      {
+        "doi": "10.1016/j.tranpol.2020.12.010",
+        "title": "Investigating the complexity of perceived service quality and perceived safety and security in building loyalty among bus passengers in Vietnam – A PLS-SEM approach",
+        "authors": "DQ Nguyen-Phuoc, ATP Tran, T Van Nguyen, PT Le, DN Su",
+        "venue": "Transport Policy, 101, 162–173 (2021)"
+      }
+    ],
+    "transport-policy-demand-management": [
+      {
+        "doi": "10.1016/j.aap.2024.107756",
+        "title": "Questioning penalties and road safety Policies: Are they enough to deter risky motorcyclist Behavior?",
+        "authors": "DQ Nguyen-Phuoc, NX Mai, J Kim, O Oviedo-Trespalacios",
+        "venue": "Accident Analysis & Prevention, 207, 107756 (2024)"
+      },
+      {
+        "doi": "10.1016/j.trf.2026.103772",
+        "title": "Fear of crashes or fear of fines? Understanding what motivates parents to travel safely",
+        "authors": "DQ Nguyen-Phuoc, NDQ Vo, A Pervez",
+        "venue": "Transportation Research Part F: Traffic Psychology and Behaviour, 122, 103772 (2026)"
+      },
+      {
+        "doi": "10.1016/j.tra.2025.104846",
+        "title": "How do the awareness of AI benefits and government subsidies affect green transport adoption: the moderating role of technology interest and engagement",
+        "authors": "DQ Nguyen-Phuoc, TM Truong, TN Ho-Mai, TT Luu, ZC Li",
+        "venue": "Transportation Research Part A: Policy and Practice, 204, 104846 (2026)"
+      },
+      {
+        "doi": "10.1016/j.tranpol.2023.11.013",
+        "title": "What factors influence the intention to use electric motorcycles in motorcycle-dominated countries? An empirical study in Vietnam",
+        "authors": "DQ Nguyen-Phuoc, TM Truong, MH Nguyen, HG Pham, ZC Li, et al.",
+        "venue": "Transport Policy, 146, 193–204 (2024)"
+      },
+      {
+        "doi": "10.1016/j.jtrangeo.2023.103705",
+        "title": "The influence of environmental concerns and psychosocial factors on electric motorbike switching intention in the global south",
+        "authors": "DQ Nguyen-Phuoc, NAN Nguyen, PTK Tran, HG Pham, et al.",
+        "venue": "Journal of Transport Geography, 113, 103705 (2023)"
+      }
+    ]
+  };
   var topicOrder = ["urban-planning", "smart-city", "future-mobility", "traffic-safety", "transport-equity-accessibility", "transport-policy-demand-management"];
   var navLabels = ["Urban Planning", "Smart City", "Future Mobility", "Traffic Safety", "Equity & Accessibility", "Policy & Demand"];
 
@@ -99,7 +276,10 @@
       '<div class="research-detail-hero"><img src="' + escapeHtml(topic.image) + '" alt="' + escapeHtml(topic.alt) + '"></div>' +
       '<p class="research-detail-eyebrow">' + escapeHtml(topic.eyebrow) + '</p>' +
       '<h1>' + escapeHtml(topic.title) + '</h1>' +
-      '<div class="research-detail-body">' + topic.description.map(function (text) { return '<p>' + escapeHtml(text) + '</p>'; }).join('') + '</div>';
+      '<div class="research-detail-body">' + topic.description.map(function (text) { return '<p>' + escapeHtml(text) + '</p>'; }).join('') + '</div>' +
+      '<section class="research-papers"><h2>Selected publications</h2><div class="publication-list">' + topicPapers[topic.slug].map(function (p) {
+        return '<a class="publication-item" href="https://doi.org/' + escapeHtml(p.doi) + '" target="_blank" rel="noopener"><h2>' + escapeHtml(p.title) + '</h2><p class="publication-authors">' + escapeHtml(p.authors) + '</p><p class="publication-venue">' + escapeHtml(p.venue) + '</p></a>';
+      }).join('') + '</div></section>';
   }
 
   var root = document.querySelector("[data-research-detail]");

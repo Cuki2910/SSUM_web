@@ -1375,3 +1375,18 @@ a.publication-item:focus-visible {
   transform: translateY(-2px);
   border-left-color: var(--color-cta, #c72127);
 }
+
+.research-papers {
+  margin-top: 40px;
+}
+
+.research-papers > h2 {
+  margin: 0 0 18px;
+  color: var(--color-primary-dark);
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 3vw, 30px);
+}
+
+.research-papers .publication-item h2 {
+  font-size: 18px;
+}
