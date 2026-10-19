@@ -1331,12 +1331,13 @@ main:has(.section-hero) {
 }
 
 .publication-tab {
+  flex: 1 1 0;
   padding: 10px 24px;
   border: 1px solid var(--color-border);
   border-radius: 999px;
   background: #fff;
   color: var(--color-primary-dark);
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
