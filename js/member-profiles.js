@@ -36,6 +36,7 @@
       name: 'Vo Dinh Quang Nhat, MSc',
       cv: 'assets/cv/vo-dinh-quang-nhat-cv.pdf',
       photo: 'assets/images/member/card/quang-nhat-card.jpg',
+      topics: ['Urban Planning', 'Smart City', 'Traffic Safety', 'Transport Policy & Demand Management'],
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
       linkedin: 'https://www.linkedin.com/in/dinh-quang-nhat-vo-28563b1a6/'
@@ -45,6 +46,7 @@
       cv: 'assets/cv/ho-thi-minh-ngan-cv.pdf',
       linkedin: 'https://www.linkedin.com/in/ngan-ho-minh/',
       photo: 'assets/images/member/card/minh-ngan-card.jpg',
+      topics: ['Urban Planning', 'Future Mobility', 'Transport Policy & Demand Management'],
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
     },
@@ -78,6 +80,7 @@
       name: 'Dang Tuan Kiet',
       cv: 'assets/cv/dang-tuan-kiet-cv.pdf',
       photo: 'assets/images/member/card/dang-tuan-kiet-card.jpg',
+      topics: ['Urban Planning', 'Future Mobility', 'Transport Policy & Demand Management'],
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
       linkedin: 'https://www.linkedin.com/in/cuki2910/',
@@ -87,6 +90,7 @@
       name: 'Le Nhat Minh',
       cv: 'assets/cv/le-nhat-minh-cv.pdf',
       photo: 'assets/images/member/card/le-nhat-minh-card.jpg',
+      topics: ['Traffic Safety', 'Transport Policy & Demand Management'],
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
       linkedin: 'https://www.linkedin.com/in/nh%E1%BA%ADt-minh-l%C3%AA-03b21b373/'
@@ -96,6 +100,7 @@
       cv: 'assets/cv/le-huy-tam-cv.pdf',
       linkedin: 'https://www.linkedin.com/in/lehuytam/',
       photo: 'assets/images/member/card/tam-card.jpg',
+      topics: ['Urban Planning', 'Smart City', 'Future Mobility'],
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity'
     },
@@ -103,6 +108,7 @@
       name: 'Vo Thuy Ngan',
       cv: 'assets/cv/vo-thuy-ngan-cv.pdf',
       photo: 'assets/images/member/card/thuy-ngan-card.jpg',
+      topics: ['Transport Equity & Accessibility', 'Transport Policy & Demand Management'],
       role: 'Research Assistant',
       organisation: 'Smart Green Transformation Center (GREEN-X), VinUniversity',
       linkedin: 'https://www.linkedin.com/in/thuynganvo'

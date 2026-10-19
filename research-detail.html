@@ -18,7 +18,7 @@
     .research-detail { width: min(920px, 90%); margin: 0 auto; }
     .research-page-hero { margin-bottom: 0; }
     .research-topic-bar { width: 100%; border-bottom: 1px solid var(--color-border); background: #fff; }
-    .research-topic-tabs { display: grid; width: min(1500px, 100%); grid-template-columns: repeat(7, minmax(0, 1fr)); margin: 0 auto; scrollbar-width: thin; }
+    .research-topic-tabs { display: grid; width: min(1500px, 100%); grid-template-columns: repeat(6, minmax(0, 1fr)); margin: 0 auto; scrollbar-width: thin; }
     .research-topic-tabs a { position: relative; min-height: 72px; display: inline-flex; align-items: center; justify-content: center; padding: 10px 14px; color: var(--color-text); font-size: 14px; font-weight: 700; line-height: 1.3; text-align: center; text-decoration: none; }
     .research-topic-tabs a::after { position: absolute; right: 18px; bottom: 0; left: 18px; height: 4px; background: var(--color-primary-dark); content: ''; opacity: 0; transform: scaleX(.4); transition: opacity .2s ease, transform .2s ease; }
     .research-topic-tabs a[aria-current="page"] { color: var(--color-primary-dark); font-weight: 900; }
@@ -31,8 +31,7 @@
     .research-breadcrumb [aria-hidden="true"] { color: var(--color-border); }
     .research-breadcrumb [aria-current="page"] { color: var(--color-primary-dark); }
     .research-detail-hero { position: relative; overflow: hidden; border-radius: var(--radius-card); box-shadow: var(--shadow-soft); }
-    .research-detail-hero img { display: block; width: 100%; aspect-ratio: 16 / 8; object-fit: cover; }
-    .research-detail-hero--graphic { aspect-ratio: 16 / 8; background: linear-gradient(135deg, transparent 0 28%, rgba(255, 255, 255, .08) 28% 48%, transparent 48%), linear-gradient(45deg, transparent 0 46%, rgba(3, 27, 69, .2) 46% 71%, transparent 71%), #134d8b; }
+    .research-detail-hero img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #fff; }
     .research-detail-eyebrow { display: inline-flex; align-items: center; margin: 32px 0 12px; padding: 0 11px; min-height: 30px; border-radius: 999px; background: var(--color-cta); color: #fff; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
     .research-detail h1 { margin: 0 0 20px; color: var(--color-primary-dark); font-family: var(--font-heading); font-size: clamp(32px, 5vw, 48px); line-height: 1.1; }
     .research-detail-body p { margin: 0 0 18px; color: var(--color-text); font-size: 17px; line-height: 1.7; }
@@ -66,7 +65,7 @@
       </nav>
     </div>
     <main>
-      <section class="section-hero research-page-hero"><div class="section-hero__inner"><h1>Research Focus</h1><p>Seven research themes driving sustainable, safe, and intelligent urban mobility.</p></div></section>
+      <section class="section-hero research-page-hero"><div class="section-hero__inner"><h1>Research Focus</h1><p>Six research streams driving sustainable, safe, and intelligent urban mobility.</p></div></section>
       <section class="research-topic-bar"><nav class="research-topic-tabs" data-research-topic-tabs aria-label="Research focus topics"></nav></section>
       <div class="research-detail" data-research-detail></div>
     </main>

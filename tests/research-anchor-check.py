@@ -18,7 +18,7 @@ with sync_playwright() as playwright:
         section = page.locator("#research")
         cards = section.locator(".research-card")
         assert cta.get_attribute("href") == "#research"
-        assert cards.count() == 7
+        assert cards.count() == 6
         cta.click()
         page.wait_for_timeout(700)
         assert page.url.endswith("#research")
