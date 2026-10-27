@@ -1465,3 +1465,11 @@ a.publication-item:focus-visible {
 .research-papers .publication-item h2 {
   font-size: 18px;
 }
+
+/* Long-form paragraphs: justified */
+.indexabout .lab-about-card p,
+.director-hero__bio p,
+.research-detail-body p {
+  text-align: justify;
+  text-wrap: pretty;
+}

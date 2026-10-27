@@ -9,7 +9,7 @@
       organisation: 'Head, Vin Sustainable and Smart Urban Mobility Lab (VIN-SSUM)',
       bio: 'Dr. Nguyen-Phuoc received his Ph.D. from Monash University, Australia, in 2018 and then worked as a Postdoctoral Researcher at the Singapore-MIT Alliance for Research and Technology (SMART). In 2025, he joined VinUniversity, where he leads the Vin Sustainable and Smart Urban Mobility Lab (VIN-SSUM). His research covers sustainable mobility, travel behaviour, traffic safety, transport modelling, and transport economics. He has published more than 80 articles in leading international peer-reviewed journals (Web of Science, Q1) and has an h-index of 37. Several of his papers rank among the most cited articles in top-tier (A*/A) journals. He has been named in the Stanford/Elsevier Top 2% Scientists list in the field of Logistics & Transportation in 2025 and 2026.',
       education: ['Postdoctoral Associate, Singapore-MIT Alliance for Research and Technology (SMART), 2018-2020','PhD in Transportation, Monash University, Australia, 2018','Master in Civil Engineering, Myongji University, Korea, 2010','Engineering Degree in Civil Engineering, University of Danang - University of Science and Technology, Vietnam, 2005'],
-      label: 'Lab Director',
+      label: 'Lab Head',
       topics: ['Urban Planning', 'Smart City', 'Future Mobility', 'Traffic Safety', 'Transport Equity & Accessibility', 'Transport Policy & Demand Management'],
       publications: [
         'Nguyen-Phuoc, D.Q.*, Nguyen, B.V., Vo, D.Q.N & Wong, Y.D., 2025, ‘Riding safely with kids: Uncovering key factors driving parents’ safe riding intentions’. Accident Analysis & Prevention (Q1, A*). Vol 221, pp. 108209. DOI: 10.1016/j.aap.2025.108209',
@@ -63,7 +63,7 @@
       awards: ['Top 5, Kawai Business Startup Competition 2025 - Co-founder and Product Lead of NEU Reader','University-level "Student of Five Merits" Award, 2022-2023','Top 3, SheCodes Hackathon 2022'],
       name: 'Tran Thi Hai Yen',
       photo: 'assets/images/member/card/hai-yen-card.jpg',
-      role: 'Research Assistant - Master Student',
+      role: 'Research Assistant',
       topics: ['Urban Planning', 'Smart City', 'Future Mobility', 'Transport Policy & Demand Management'],
       cv: 'assets/cv/tran-thi-hai-yen-cv.pdf',
       linkedin: 'https://www.linkedin.com/in/thihaiyentran2001/'
@@ -71,7 +71,7 @@
     'nguyen-thu-hang': {
       name: 'Nguyen Thu Hang',
       photo: 'assets/images/member/card/hang-card.jpg',
-      role: 'Research Assistant - Undergraduate Student',
+      role: 'Research Assistant',
       topics: ['Transport Equity & Accessibility', 'Transport Policy & Demand Management'],
       researchTitles: ['Enhancing Mobility Amongst Persons with Disability (PWDs) in the Modern Technology Era'],
       education: ['Public Relations, National Economics University (NEU). Expected graduation: 1/2027. GPA: 3.98/4.00'],
@@ -83,7 +83,7 @@
       name: 'Vu Huu An',
       cv: 'assets/cv/vu-huu-an-cv.pdf',
       photo: 'assets/images/member/card/vu-huu-an-card.jpg',
-      role: 'Research Assistant - Undergraduate Student'
+      role: 'Research Assistant'
     },
     'dang-tuan-kiet': {
       awards: ['First Prize, District-level Excellent Students Competition in Physics, 2022','Third Prize, QuantVN Scholarship Season 1'],
