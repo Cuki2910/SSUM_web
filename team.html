@@ -121,6 +121,11 @@
     .director-feature .profile-actions a:hover, .director-feature .profile-actions a:focus-visible { border-color: var(--color-accent); background: var(--color-accent); }
     @media (max-width: 900px) { .director-feature .person-card.is-featured { display: flex; min-height: 0; flex-direction: column-reverse; } .director-feature .person-photo { width: 100%; height: min(110vw, 540px) !important; object-position: 58% 20%; } }
     .assistants-grid { display: grid; gap: 20px; }
+    .person-details { margin: 0; color: var(--color-text); font-size: 15px; line-height: 1.6; overflow-wrap: anywhere; }
+    .person-details dt { margin-top: 14px; color: var(--color-primary-dark); font-weight: 800; }
+    .person-details dd { margin: 4px 0 0; }
+    .person-details ul { margin: 0; padding-left: 20px; }
+    .person-details li + li { margin-top: 4px; }
     .person-card.is-wide { position: relative; display: grid; grid-template-areas: 'copy portrait'; grid-template-columns: minmax(0, 1fr) minmax(220px, 34%); min-height: 200px; border-radius: 18px; }
     .person-card.is-wide .person-photo { grid-area: portrait; height: 100% !important; aspect-ratio: 4 / 3 !important; background: linear-gradient(135deg, transparent 0 28%, rgba(255, 255, 255, .08) 28% 48%, transparent 48%), linear-gradient(45deg, transparent 0 46%, rgba(3, 27, 69, .2) 46% 71%, transparent 71%), #134d8b; object-fit: cover; object-position: center 20%; }
     .person-card.is-wide .person-body { grid-area: copy; display: flex; flex-direction: column; justify-content: center; padding: 26px 30px !important; }
@@ -224,6 +229,17 @@
                 <div class="person-body">
                   <h3>Vo Dinh Quang Nhat, MSc</h3>
                   <p class="person-role">Research Assistant</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>Master of Transportation Engineering, University of Seoul (UOS), South Korea, 2021-2023</li>
+                      <li>Bachelor of Civil Engineering, University of Science and Technology - The University of Danang (DUT), 2014-2019</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>Understanding the Factors Influencing Perceived Accessibility of Public Transport Across Major Cities in Vietnam</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Urban Planning</span><span>Smart City</span><span>Traffic Safety</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/dinh-quang-nhat-vo-28563b1a6/" target="_blank" rel="noopener">LinkedIn</a>
@@ -237,6 +253,16 @@
                 <div class="person-body">
                   <h3>Ho Thi Minh Ngan</h3>
                   <p class="person-role">Research Assistant - Master Student</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>Information Technology, National Economics University (NEU), Vietnam, 2025. GPA: 3.9/4.0</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>Large Language Models for Traffic Behavior Analysis</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Urban Planning</span><span>Future Mobility</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/ngan-ho-minh/" target="_blank" rel="noopener">LinkedIn</a>
@@ -250,6 +276,16 @@
                 <div class="person-body">
                   <h3>Tran Thi Hai Yen</h3>
                   <p class="person-role">Research Assistant</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>Bachelor in Information Technology, National Economics University, 2023. GPA: 3.75/4.00</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>Passenger Satisfaction and Loyalty Toward Electric Bus Services</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Urban Planning</span><span>Smart City</span><span>Future Mobility</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/thihaiyentran2001/" target="_blank" rel="noopener">LinkedIn</a>
@@ -263,6 +299,16 @@
                 <div class="person-body">
                   <h3>Nguyen Thu Hang</h3>
                   <p class="person-role">Research Assistant</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>Public Relations, National Economics University (NEU). Expected graduation: 1/2027. GPA: 3.98/4.00</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>Enhancing Mobility Amongst Persons with Disability (PWDs) in the Modern Technology Era</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Transport Equity &amp; Accessibility</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/hangnguyen2604/" target="_blank" rel="noopener">LinkedIn</a>
@@ -288,6 +334,16 @@
                 <div class="person-body">
                   <h3>Dang Tuan Kiet</h3>
                   <p class="person-role">Research Assistant - Undergraduate Student</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>BSc. Data Science, College of Engineering and Computer Science, VinUniversity. Expected graduation: 6/2029</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>Fragmented Mobility Capability in Motorcycle-Dependent Green Megaprojects</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Urban Planning</span><span>Future Mobility</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/cuki2910/" target="_blank" rel="noopener">LinkedIn</a>
@@ -301,6 +357,16 @@
                 <div class="person-body">
                   <h3>Le Nhat Minh</h3>
                   <p class="person-role">Research Assistant - Undergraduate Student</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>Multimedia Communication, VinUniversity. Expected graduation: 6/2029. GPA: 3.63/4.00</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>The Dynamics of Behavioral Spillover Effects in the EV Context of Vietnam</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Traffic Safety</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/nh%E1%BA%ADt-minh-l%C3%AA-03b21b373/" target="_blank" rel="noopener">LinkedIn</a>
@@ -314,6 +380,16 @@
                 <div class="person-body">
                   <h3>Le Huy Tam</h3>
                   <p class="person-role">Research Assistant - Undergraduate Student</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>BSc. Data Science, College of Engineering and Computer Science, VinUniversity. Expected graduation: 6/2029</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>Quantifying the Impact of Building Morphology on Urban Heat Islands in Ho Chi Minh City, Vietnam Using Spatial Regression Analysis</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Urban Planning</span><span>Smart City</span><span>Future Mobility</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/lehuytam/" target="_blank" rel="noopener">LinkedIn</a>
@@ -327,6 +403,16 @@
                 <div class="person-body">
                   <h3>Vo Thuy Ngan</h3>
                   <p class="person-role">Research Assistant - Undergraduate Student</p>
+                  <dl class="person-details">
+                    <dt>Education</dt>
+                    <dd><ul>
+                      <li>Multimedia Communication, VinUniversity. Expected graduation: 6/2029. GPA: 3.63/4.00</li>
+                    </ul></dd>
+                    <dt>Current Research</dt>
+                    <dd><ul>
+                      <li>From First Time Experience to Continuance Intention: The Roles of Expectation Confirmation and Trust in Electric Ride-Hailing</li>
+                    </ul></dd>
+                  </dl>
                   <div class="tag-row" aria-label="Research interests"><span>Transport Equity &amp; Accessibility</span><span>Transport Policy &amp; Demand Management</span></div>
                   <div class="profile-actions">
                     <a href="https://www.linkedin.com/in/thuynganvo" target="_blank" rel="noopener">LinkedIn</a>
