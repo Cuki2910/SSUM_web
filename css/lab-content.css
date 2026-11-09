@@ -1369,7 +1369,7 @@ main:has(.section-hero) {
 
 .publication-tabs {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   width: min(1500px, 100%);
   margin: 0 auto;
 }
