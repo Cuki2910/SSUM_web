@@ -83,7 +83,11 @@
       name: 'Vu Huu An',
       cv: 'assets/cv/vu-huu-an-cv.pdf',
       photo: 'assets/images/member/card/vu-huu-an-card.jpg',
-      role: 'Research Assistant'
+      role: 'Research Assistant',
+      topics: ['Urban Planning', 'Future Mobility', 'Transport Policy & Demand Management'],
+      researchTitles: ['Vision Language Model, Multimodal Representation Learning, Traffic Behavior Analysis'],
+      education: ['Bachelor in Data Science, Hanoi University of Science & Technology'],
+      awards: ['Promising Solution Prize, Ho Chi Minh AI Challenge 2025', 'Top 10, Road AI 2026']
     },
     'dang-tuan-kiet': {
       awards: ['First Prize, District-level Excellent Students Competition in Physics, 2022','Third Prize, QuantVN Scholarship Season 1'],
