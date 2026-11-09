@@ -12,5 +12,8 @@
   "type": "commonjs",
   "devDependencies": {
     "playwright": "^1.61.0"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
   }
 }
